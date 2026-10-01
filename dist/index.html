@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f4f0e7">
+    <meta name="theme-color" content="#f4eee5">
     <meta name="description" content="Gökdeniz Gülmez is a System Engineer at Computacenter and an open-source ML researcher and engineer.">
     <link rel="canonical" href="https://goekdeniz-guelmez.goekdenizguelmez.chatgpt.site/">
     <meta property="og:type" content="website">
@@ -14,11 +14,12 @@
     <style>
       :root {
         color-scheme: light;
-        --paper: #f4f0e7;
+        --paper: #f4eee5;
         --ink: #201d1a;
-        --muted: #6a645e;
-        --line: #d8d1c6;
-        --accent: #b94f2b;
+        --muted: #6b625b;
+        --line: #ded3c7;
+        --accent: #bd5128;
+        --orange: #ec6938;
         --serif: Iowan Old Style, "Palatino Linotype", "Book Antiqua", Georgia, serif;
         --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
@@ -31,7 +32,8 @@
       a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
       .shell { width: min(1160px, calc(100% - 64px)); margin: 0 auto; }
       .topbar { display: flex; justify-content: space-between; align-items: center; min-height: 76px; border-bottom: 1px solid var(--line); }
-      .brand { font-size: 13px; font-weight: 750; letter-spacing: .01em; text-decoration: none; }
+      .brand { display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 750; letter-spacing: .01em; text-decoration: none; }
+      .brand::before { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); content: ""; }
       .top-links, .footer-links { display: flex; flex-wrap: wrap; gap: 22px; }
       .top-links a, .footer-links a { color: var(--muted); font: 500 10px var(--mono); letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
       .top-links a:hover, .footer-links a:hover { color: var(--accent); }
@@ -41,11 +43,14 @@
       h1 em { color: var(--accent); font-family: var(--serif); font-weight: 500; letter-spacing: -.075em; }
       .lead { max-width: 650px; margin: 0; color: #4f4943; font-size: clamp(18px, 2.2vw, 23px); line-height: 1.5; }
       .hero-links { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 30px; }
-      .hero-links a { color: var(--ink); font-size: 13px; font-weight: 650; }
+      .hero-links a { display: inline-flex; align-items: center; min-height: 46px; padding: 0 16px; border: 1px solid var(--line); color: var(--ink); font-size: 13px; font-weight: 650; text-decoration: none; }
+      .hero-links a:first-child { border-color: var(--accent); background: var(--accent); color: #fffaf3; }
       .hero-links a:hover { color: var(--accent); }
-      .portrait { position: relative; width: min(100%, 330px); aspect-ratio: 1; justify-self: end; margin: 0; overflow: hidden; background: #e3d9ca; }
-      .portrait img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 36%; }
-      .portrait figcaption { position: absolute; right: 12px; bottom: 12px; padding: 5px 8px; background: var(--paper); color: var(--muted); font: 500 8px var(--mono); letter-spacing: .09em; text-transform: uppercase; }
+      .hero-links a:first-child:hover { border-color: #a84623; background: #a84623; color: #fffaf3; }
+      .hero-links a:last-child:hover { border-color: var(--accent); color: var(--accent); }
+      .portrait { position: relative; display: grid; place-items: center; width: min(100%, 330px); aspect-ratio: 1; justify-self: end; margin: 0; overflow: hidden; background: var(--orange); padding: 12px; }
+      .portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 36%; }
+      .portrait figcaption { position: absolute; right: 20px; bottom: 20px; padding: 5px 8px; background: var(--paper); color: var(--accent); font: 500 8px var(--mono); letter-spacing: .09em; text-transform: uppercase; }
       .work { border-top: 1px solid var(--line); padding: 14px 0 52px; }
       .work-row { display: grid; grid-template-columns: 175px minmax(0, 760px); gap: 34px; padding: 29px 0; border-bottom: 1px solid var(--line); }
       .work-row .label { padding-top: 5px; }
@@ -66,7 +71,7 @@
         .top-links { gap: 14px; }
         .top-links a { font-size: 9px; }
         .hero { grid-template-columns: 1fr; gap: 30px; padding: 68px 0 56px; }
-        .portrait { width: 164px; justify-self: start; grid-row: 1; }
+        .portrait { width: 164px; justify-self: start; grid-row: 1; padding: 7px; }
         .hero-copy { grid-row: 2; }
         h1 { margin: 16px 0 19px; font-size: clamp(58px, 14vw, 90px); }
         .work-row { grid-template-columns: 1fr; gap: 10px; padding: 23px 0; }
