@@ -245,6 +245,15 @@
       .architecture-panel .source-label { color: var(--accent); }
       .architecture-panel h3 { margin: 10px 0 0; color: var(--ink); font-size: 20px; letter-spacing: -.035em; }
       .architecture-panel p { max-width: 850px; margin: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
+      .architecture-list { margin: 20px 0 0; padding: 0; list-style: none; }
+      .architecture-list li { display: grid; grid-template-columns: minmax(130px, .45fr) 1.55fr; gap: 8px 24px; padding: 11px 0; border-top: 1px solid var(--line); }
+      .architecture-org { color: var(--ink); font-size: 13px; font-weight: 650; }
+      .architecture-models { margin: 0; color: var(--ink); font-size: 13px; font-weight: 560; }
+      .architecture-links { margin: 3px 0 0 !important; color: var(--muted); font-size: 11px !important; line-height: 1.7 !important; }
+      .architecture-links b { color: var(--muted); font-weight: 550; }
+      .architecture-links a { white-space: nowrap; }
+      .architecture-note { margin-top: 17px !important; }
+      .architecture-note strong { color: var(--ink); font-weight: 650; }
       .architecture-tags { display: block; margin: 15px 0 0; padding: 0; list-style: none; }
       .architecture-tags li { display: inline; padding: 0; border: 0; border-radius: 0; background: none; color: #514a44; font: 500 11px var(--sans); }
       .architecture-tags li:not(:last-child)::after { content: ", "; color: var(--accent); }
@@ -296,6 +305,7 @@
         .section-heading { margin-bottom: 21px; }
         .intro-grid, .model-family { grid-template-columns: 1fr; gap: 22px; }
         .contrib-lede { margin: -3px 0 16px; }
+        .architecture-list li { grid-template-columns: 1fr; gap: 2px; padding: 12px 0; }
         .career-card { grid-template-columns: 1fr; gap: 14px; }
         .connect { align-items: start; flex-direction: column; gap: 18px; }
         .reference-grid { grid-template-columns: 1fr; }
@@ -403,16 +413,31 @@
           </div>
           <div class="architecture-panel">
             <span class="source-label">Model architecture support · MLX-LM</span>
-            <h3>From NVIDIA and DeepSeek to open model labs worldwide.</h3>
-            <p>The MLX-LM acknowledgement records the upstream architecture work below; my profile also documents Mamba v3, and DeepSeek-V4.1 landed in a separate merged upstream pull request.</p>
-            <ul class="architecture-tags" aria-label="Model architectures supported">
-              <li>DeepSeek-V4.1</li><li>NVIDIA Nemotron H</li><li>MiniCPM · MiniCPM3</li><li>Helium</li>
-              <li>Mamba v1 · v2 · v3</li><li>GLM · GLM4 · GLM5</li><li>dots.llm1</li><li>ERNIE 4.5 MoE</li>
-              <li>Bailing MoE · Ling</li><li>Ling-Linear</li><li>Klear</li><li>Jamba</li><li>Granite MoE</li>
-              <li>LongCat</li><li>Apertus</li><li>Lille130m</li><li>Qwen3Next</li><li>Qwen3 · Qwen3MoE</li>
-              <li>TeleChat3</li><li>OLMoE · OLMo 3</li>
+            <h3>26 model variants across 18 organizations.</h3>
+            <p>MLX-LM’s acknowledgements credit my work on the architectures below. “Weights” links to an original checkpoint or official model collection; PRs link to the upstream implementation work.</p>
+            <ul class="architecture-list" aria-label="MLX-LM model architectures, original weights, and pull requests">
+              <li><span class="architecture-org">OpenBMB</span><div><p class="architecture-models">MiniCPM · MiniCPM3</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/collections/openbmb/minicpm">MiniCPM family</a> · <b>PRs</b> <a href="https://github.com/ml-explore/mlx-examples/pull/685">#685</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/24">#24</a></p></div></li>
+              <li><span class="architecture-org">Kyutai</span><div><p class="architecture-models">Helium</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/kyutai/helium-1-preview-2b">Helium-1 preview · 2B</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-examples/pull/1208">#1208</a></p></div></li>
+              <li><span class="architecture-org">State Space</span><div><p class="architecture-models">Mamba v1 · Mamba v2</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/state-spaces/mamba-2.8b-hf">Mamba v1</a> · <a href="https://huggingface.co/state-spaces/mamba2-2.7b">Mamba v2</a> · <b>PRs</b> <a href="https://github.com/ml-explore/mlx-examples/pull/940">#940</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/392">#392</a></p></div></li>
+              <li><span class="architecture-org">Z.ai · THUKEG</span><div><p class="architecture-models">GLM · GLM4 · GLM5 (MoE DSA)</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/zai-org/glm-4-9b">GLM-4</a> · <a href="https://huggingface.co/zai-org/GLM-5">GLM-5</a> · <b>PRs</b> <a href="https://github.com/ml-explore/mlx-lm/pull/457">#457</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/99">#99</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/867">#867</a></p></div></li>
+              <li><span class="architecture-org">Rednote</span><div><p class="architecture-models">dots.llm1</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/rednote-hilab/dots.llm1.inst">dots.llm1.inst</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-lm/pull/211">#211</a></p></div></li>
+              <li><span class="architecture-org">Baidu</span><div><p class="architecture-models">ERNIE 4.5 MoE</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/baidu/ERNIE-4.5-21B-A3B-Base-PT">ERNIE-4.5-21B-A3B</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-lm/pull/267">#267</a></p></div></li>
+              <li><span class="architecture-org">inclusionAI</span><div><p class="architecture-models">Bailing MoE (Ling) · Bailing MoE Linear (Ling-Linear)</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/inclusionAI/Ling-lite">Ling-lite</a> · <a href="https://huggingface.co/inclusionAI/Ring-mini-linear-2.0">Ring Mini Linear</a> · <b>PRs</b> <a href="https://github.com/ml-explore/mlx-lm/pull/369">#369</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/513">#513</a></p></div></li>
+              <li><span class="architecture-org">Klear · Kuaishou</span><div><p class="architecture-models">Klear</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/Kwai-Klear/Klear-46B-A2.5B-Instruct">Klear-46B-A2.5B</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-lm/pull/437">#437</a></p></div></li>
+              <li><span class="architecture-org">AI21 Labs</span><div><p class="architecture-models">Jamba</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/ai21labs/Jamba-v0.1">Jamba-v0.1</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-lm/pull/544">#544</a></p></div></li>
+              <li><span class="architecture-org">IBM</span><div><p class="architecture-models">Granite MoE</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/ibm-granite/granite-4.0-h-small">Granite 4.0 H Small</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-lm/pull/413">#413</a></p></div></li>
+              <li><span class="architecture-org">Mistral AI</span><div><p class="architecture-models">Mistral4</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/mistralai/Mistral-Small-4-119B-2603">Mistral Small 4</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-lm/pull/1012">#1012</a></p></div></li>
+              <li><span class="architecture-org">Meituan</span><div><p class="architecture-models">LongCat</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/meituan-longcat/LongCat-Flash-Chat">LongCat Flash Chat</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-lm/pull/423">#423</a></p></div></li>
+              <li><span class="architecture-org">NVIDIA</span><div><p class="architecture-models">Nemotron H</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/nvidia/Nemotron-H-8B-Base-8K">Nemotron H 8B</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-lm/pull/407">#407</a></p></div></li>
+              <li><span class="architecture-org">Swiss AI</span><div><p class="architecture-models">Apertus</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/swiss-ai/Apertus-8B-2509">Apertus 8B</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-lm/pull/421">#421</a></p></div></li>
+              <li><span class="architecture-org">Nikity</span><div><p class="architecture-models">Lille130m</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/Nikity/lille-130m-base">Lille 130M</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-lm/pull/429">#429</a></p></div></li>
+              <li><span class="architecture-org">Alibaba Qwen</span><div><p class="architecture-models">Qwen3Next · Qwen3 · Qwen3MoE</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct">Qwen3-Next</a> · <a href="https://huggingface.co/Qwen/Qwen3-8B">Qwen3</a> · <b>PRs</b> <a href="https://github.com/ml-explore/mlx-lm/pull/441">#441</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/42">#42*</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/199">#199</a></p></div></li>
+              <li><span class="architecture-org">Tele-AI</span><div><p class="architecture-models">TeleChat3</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/Tele-AI/TeleChat3-36B-Thinking">TeleChat3 36B</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-lm/pull/773">#773</a></p></div></li>
+              <li><span class="architecture-org">AllenAI</span><div><p class="architecture-models">OLMoE · OLMo 3</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/allenai/OLMoE-1B-7B-0924">OLMoE</a> · <a href="https://huggingface.co/allenai/Olmo-3-7B-Instruct">OLMo 3</a> · <b>PRs</b> <a href="https://github.com/ml-explore/mlx-examples/pull/1321">#1321</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/445">#445</a></p></div></li>
             </ul>
-            <a class="text-link" href="https://github.com/ml-explore/mlx-lm/pull/1895">DeepSeek-V4.1 · merged PR #1895 <span aria-hidden="true">↗</span></a>
+            <p class="architecture-note"><strong>Additional work:</strong> DeepSeek-V4.1 is a later merged addition — <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash">weights</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/1895">merged PR #1895</a>. Mamba v3 is still in review — <a href="https://huggingface.co/state-spaces/mamba3-siso-1.5b">weights</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/1021">open PR #1021</a>.</p>
+            <p class="architecture-note"><strong>Qwen3 note:</strong> PR <a href="https://github.com/ml-explore/mlx-lm/pull/42">#42</a> was closed without merging; the upstream acknowledgement separately credits my help on Qwen3 and Qwen3MoE. PR <a href="https://github.com/ml-explore/mlx-lm/blob/main/ACKNOWLEDGMENTS.md">#199</a> is a merged follow-up touching the Qwen3 MoE implementation.</p>
+            <a class="text-link" href="https://github.com/ml-explore/mlx-lm/blob/main/ACKNOWLEDGMENTS.md">Read the MLX-LM acknowledgements <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
