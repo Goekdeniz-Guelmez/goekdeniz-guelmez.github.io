@@ -330,7 +330,7 @@
       </a>
       <nav class="nav" aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#contributions">MLX stack</a>
+        <a href="#contributions">Open source</a>
         <a href="#research">Research</a>
         <a href="#models">J.O.S.I.E.</a>
         <a href="#projects">Projects</a>
@@ -345,17 +345,17 @@
           <figcaption>Open source · Apple Silicon</figcaption>
         </figure>
         <div class="hero-inner">
-          <p class="eyebrow">Key contributor · Apple MLX ecosystem</p>
+          <p class="eyebrow">Open-source contributor · Apple MLX</p>
           <h1 id="hero-title">Gökdeniz<br>Gülmez<span>.</span></h1>
-          <p class="hero-copy"><strong>System Engineer at Computacenter · ML Engineer · Researcher.</strong> In my day job, I focus on ML engineering and MLOps. In my free time, I contribute to open source and pursue ML research and engineering. I’m a key contributor to Apple’s MLX framework and MLX-LM, bringing a wide range of model architectures and training capabilities to local AI on Apple Silicon. I maintain the MLX-VLM trainer backend and develop the J.O.S.I.E. model family.</p>
+          <p class="hero-copy"><strong>System Engineer at Computacenter · ML Engineer · Researcher.</strong> I build machine-learning systems—software that learns patterns from examples—and help take them from experiments into reliable services. That work is called MLOps. In my free time, I contribute to open source and research ways to run and train AI on Apple chips. I’m a key contributor to Apple’s MLX toolkit and MLX-LM, which make it easier to run and train language models locally. I also maintain the training engine for models that work with images and text, and develop my own J.O.S.I.E. model family.</p>
           <div class="hero-actions">
             <a class="button" href="#contributions">See upstream work <span aria-hidden="true">↘</span></a>
             <a class="button secondary" href="https://github.com/Goekdeniz-Guelmez">GitHub <span aria-hidden="true">↗</span></a>
           </div>
           <div class="hero-foot" aria-label="Areas of focus">
-            <span class="chip">Apple Silicon</span>
-            <span class="chip">MLX ecosystem</span>
-            <span class="chip">LLM training</span>
+            <span class="chip">Apple chips</span>
+            <span class="chip">Apple’s MLX tools</span>
+            <span class="chip">Training language models</span>
             <span class="chip">MLOps</span>
             <span class="chip">Local AI</span>
           </div>
@@ -365,15 +365,15 @@
       <section class="shell section" id="about" aria-labelledby="about-title">
         <div class="section-heading">
           <p class="kicker">01 / About</p>
-          <h2 id="about-title">I bring frontier models<br>to Apple Silicon.</h2>
+          <h2 id="about-title">I help run and train AI<br>on Apple chips.</h2>
         </div>
         <div class="intro-grid">
-          <p class="intro-copy">At Computacenter, I work as a System Engineer focused on <strong>ML engineering and MLOps</strong>. Outside work, I contribute to open source and pursue ML research and engineering. Across the <strong>MLX framework, MLX-LM, MLX Examples and MLX-VLM</strong>, that work spans core training primitives, model architecture support, and the trainer backend for vision-language models.</p>
+          <p class="intro-copy">At Computacenter, I work as a System Engineer focused on <strong>machine-learning engineering and MLOps</strong>—the work of deploying, monitoring and maintaining software that uses AI. Outside work, I contribute to open source and conduct ML research. Apple’s <strong>MLX tools</strong> let developers build, train and run models on Apple chips. My contributions help those tools support more models and make it easier to teach them new tasks, including models that understand both images and words.</p>
           <div class="focus-panel" aria-label="Technical interests">
             <div class="focus-item"><small>01 / Systems</small><span>ML engineering &amp; MLOps</span></div>
-            <div class="focus-item"><small>02 / Runtime</small><span>On-device inference</span></div>
-            <div class="focus-item"><small>03 / Training</small><span>Fine-tuning &amp; alignment</span></div>
-            <div class="focus-item"><small>04 / Research</small><span>Interpretability &amp; MoE</span></div>
+            <div class="focus-item"><small>02 / Runtime</small><span>Run models on Apple devices</span></div>
+            <div class="focus-item"><small>03 / Training</small><span>Adapt models to new tasks</span></div>
+            <div class="focus-item"><small>04 / Research</small><span>How models work and specialize</span></div>
           </div>
         </div>
       </section>
@@ -382,39 +382,39 @@
         <div class="shell section">
           <div class="section-heading">
             <p class="kicker">02 / Upstream</p>
-            <h2 id="contrib-title">I help build the MLX stack.</h2>
+          <h2 id="contrib-title">I help make AI work<br>on Apple chips.</h2>
           </div>
-          <p class="contrib-lede">Across core MLX, MLX-LM, MLX Examples and MLX-VLM, I work on the pieces that make more models trainable and usable on Apple Silicon. The upstream projects credit specific contributions below.</p>
+          <p class="contrib-lede">MLX is Apple’s open-source toolkit for machine learning. The tools around it help people run and train AI models directly on Apple chips. Here are some of my credited contributions.</p>
           <div class="contrib-grid">
             <article class="contrib-card">
               <div class="card-top"><span class="number">01</span><span class="source-label">Core framework · MLX</span></div>
               <h3>New training primitives</h3>
-              <p>I added the Muon optimizer and ReLU² activation function to core MLX—foundational capabilities now credited in the framework’s contributor acknowledgements.</p>
+              <p>I added Muon, a method for updating a model as it learns, and ReLU², a small mathematical function used inside neural networks. Both are credited in MLX’s contributor acknowledgements.</p>
               <a class="text-link" href="https://github.com/ml-explore/mlx/blob/main/ACKNOWLEDGMENTS.md">See MLX acknowledgements <span aria-hidden="true">↗</span></a>
             </article>
             <article class="contrib-card">
               <div class="card-top"><span class="number">02</span><span class="source-label">Language models · MLX-LM</span></div>
-              <h3>Architectures at scale</h3>
-              <p>I’ve brought a wide range of model families into MLX-LM, alongside full-weight fine-tuning, Muon, multi-optimizer training and Weights &amp; Biases reporting. DeepSeek-V4.1 support was contributed in a merged upstream pull request.</p>
+              <h3>Support for 20+ model designs</h3>
+              <p>MLX-LM is Apple’s toolkit for running and training text-generating AI models. I helped it support more than 20 model designs, and added ways to train every learned value in a model, choose between training methods, and track experiments with Weights &amp; Biases, a tool for recording and comparing training runs. A model design is its internal blueprint; the list below links to the original model files and code changes.</p>
               <a class="text-link" href="https://github.com/ml-explore/mlx-lm/blob/main/ACKNOWLEDGMENTS.md">Read MLX-LM credits <span aria-hidden="true">↗</span></a>
             </article>
             <article class="contrib-card">
               <div class="card-top"><span class="number">03</span><span class="source-label">Vision-language · MLX-VLM</span></div>
               <h3>Training backend maintainer</h3>
-              <p>I’m the main maintainer of MLX-VLM’s trainer backend. I rebuilt the training path and added ORPO support, bringing more fine-tuning capability to vision-language models running on Apple Silicon.</p>
+              <p>MLX-VLM works with models that handle both images and words. I’m the main maintainer of its training engine—the code that runs the learning process. I rebuilt that engine and added ORPO, a way to teach models from examples of preferred and less-preferred answers.</p>
               <a class="text-link" href="https://github.com/Blaizzy/mlx-vlm">Explore MLX-VLM <span aria-hidden="true">↗</span></a>
             </article>
             <article class="contrib-card">
               <div class="card-top"><span class="number">04</span><span class="source-label">Examples · MLX Examples</span></div>
               <h3>Workflows people can run</h3>
-              <p>The MLX Examples project credits my work on MiniCPM, Helium, Mamba v1 and OLMoE support, as well as full-fine-tuning support.</p>
+              <p>MLX Examples offers practical, runnable demonstrations. Its acknowledgements credit my work bringing several models to the examples and adding full training, which adjusts all of a model’s learned values.</p>
               <a class="text-link" href="https://github.com/ml-explore/mlx-examples/blob/main/ACKNOWLEDGMENTS.md">Read MLX Examples credits <span aria-hidden="true">↗</span></a>
             </article>
           </div>
           <div class="architecture-panel">
             <span class="source-label">Model architecture support · MLX-LM</span>
             <h3>26 model variants across 18 organizations.</h3>
-            <p>MLX-LM’s acknowledgements credit my work on the architectures below. “Weights” links to an original checkpoint or official model collection; PRs link to the upstream implementation work.</p>
+            <p>MLX-LM credits my work on these 26 model variants from 18 organizations. An architecture is a model’s internal design; weights are the learned values that let it work. “Weights” links to original model files. “PR” means pull request: a proposed code change and its review.</p>
             <ul class="architecture-list" aria-label="MLX-LM model architectures, original weights, and pull requests">
               <li><span class="architecture-org">OpenBMB</span><div><p class="architecture-models">MiniCPM · MiniCPM3</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/collections/openbmb/minicpm">MiniCPM family</a> · <b>PRs</b> <a href="https://github.com/ml-explore/mlx-examples/pull/685">#685</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/24">#24</a></p></div></li>
               <li><span class="architecture-org">Kyutai</span><div><p class="architecture-models">Helium</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/kyutai/helium-1-preview-2b">Helium-1 preview · 2B</a> · <b>PR</b> <a href="https://github.com/ml-explore/mlx-examples/pull/1208">#1208</a></p></div></li>
@@ -436,7 +436,7 @@
               <li><span class="architecture-org">AllenAI</span><div><p class="architecture-models">OLMoE · OLMo 3</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/allenai/OLMoE-1B-7B-0924">OLMoE</a> · <a href="https://huggingface.co/allenai/Olmo-3-7B-Instruct">OLMo 3</a> · <b>PRs</b> <a href="https://github.com/ml-explore/mlx-examples/pull/1321">#1321</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/445">#445</a></p></div></li>
             </ul>
             <p class="architecture-note"><strong>Additional work:</strong> DeepSeek-V4.1 is a later merged addition — <a href="https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash">weights</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/1895">merged PR #1895</a>. Mamba v3 is still in review — <a href="https://huggingface.co/state-spaces/mamba3-siso-1.5b">weights</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/1021">open PR #1021</a>.</p>
-            <p class="architecture-note"><strong>Qwen3 note:</strong> PR <a href="https://github.com/ml-explore/mlx-lm/pull/42">#42</a> was closed without merging; the upstream acknowledgement separately credits my help on Qwen3 and Qwen3MoE. PR <a href="https://github.com/ml-explore/mlx-lm/blob/main/ACKNOWLEDGMENTS.md">#199</a> is a merged follow-up touching the Qwen3 MoE implementation.</p>
+            <p class="architecture-note"><strong>Qwen3 note:</strong> PR <a href="https://github.com/ml-explore/mlx-lm/pull/42">#42</a> closed before it was merged. The project credits my help on Qwen3 and its version built from specialist submodels; PR <a href="https://github.com/ml-explore/mlx-lm/pull/199">#199</a> is a later accepted update to that version.</p>
             <a class="text-link" href="https://github.com/ml-explore/mlx-lm/blob/main/ACKNOWLEDGMENTS.md">Read the MLX-LM acknowledgements <span aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -451,19 +451,19 @@
           <article class="research-card">
             <span class="source-label">Preprint · 2026</span>
             <h3>DynaMoE</h3>
-            <p>A Mixture-of-Experts design with token-dependent expert activation and layer-wise capacity schedules—studying adaptive compute and how expert allocation shapes learning.</p>
+            <p>A model with several specialist parts that can activate different experts for different inputs. DynaMoE studies whether choosing those specialists dynamically can help a model use its computing resources more efficiently.</p>
             <a class="text-link" href="https://arxiv.org/abs/2603.01697">Read the paper <span aria-hidden="true">↗</span></a>
           </article>
           <article class="research-card">
             <span class="source-label">Preprint · 2025</span>
             <h3>Gabliteration</h3>
-            <p>An adaptive, multi-directional weight-modification method for changing selected model behaviors while trying to preserve performance on unrelated tasks.</p>
+            <p>A method for changing selected model behaviors by editing its learned values, while checking that other abilities still work well.</p>
             <a class="text-link" href="https://arxiv.org/abs/2512.18901">Read the paper <span aria-hidden="true">↗</span></a>
           </article>
           <article class="research-card">
-            <span class="source-label">Preference optimization · ongoing</span>
-            <h3>Directional Latent Preference Optimization</h3>
-            <p>DLPO explores preference learning with latent-space regularization, aligning output preferences with changes in a model’s internal representations.</p>
+            <span class="source-label">AI training method · ongoing</span>
+            <h3>Learning from preferred answers</h3>
+            <p>Directional Latent Preference Optimization (DLPO) studies how feedback about better answers can also shape the patterns a model forms internally while processing text.</p>
             <a class="text-link" href="https://www.linkedin.com/in/g%C3%B6kdeniz-g%C3%BClmez-734b30227/">Project notes <span aria-hidden="true">↗</span></a>
           </article>
         </div>
@@ -478,7 +478,7 @@
           <div>
             <span class="source-label">My open model family · Hugging Face</span>
             <h3>Reasoning-first models, built locally.</h3>
-            <p>J.O.S.I.E. is a continuing model family exploring reasoning, honesty and independent judgment. J.O.S.I.E.-2 brings that research to open 2B, 4B and 9B models trained on Apple Silicon, with quantized releases for local inference.</p>
+            <p>J.O.S.I.E. is my family of downloadable AI models, exploring reasoning, honesty and independent judgment. J.O.S.I.E.-2 includes models with 2, 4 and 9 billion learned values, trained on Apple chips. Smaller versions, with fewer bits used to store each learned value, need less memory and are easier to run on a personal computer.</p>
             <a class="text-link" href="https://huggingface.co/blog/Goekdeniz-Guelmez/josie-2">Read the J.O.S.I.E.-2 research note <span aria-hidden="true">↗</span></a>
           </div>
           <div class="model-links" aria-label="J.O.S.I.E. model links">
@@ -500,19 +500,19 @@
           <article class="project-card featured">
             <div class="project-meta"><span>Training toolkit</span><b aria-hidden="true">01</b></div>
             <h3>MLX-LM-LoRA</h3>
-            <p>Fine-tuning and alignment workflows for language models on Apple Silicon, built around MLX and the Hugging Face Hub.</p>
+            <p>Tools for adapting language models to new tasks on Apple chips. Fine-tuning continues a model’s training with new examples; LoRA does this by learning a small add-on instead of changing every value in the original model.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/mlx-lm-lora">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
           <article class="project-card">
             <div class="project-meta"><span>Vision-language training</span><b aria-hidden="true">02</b></div>
             <h3>MLX-VLM</h3>
-            <p>Vision-language model training on MLX. I maintain the trainer backend and its fine-tuning workflows.</p>
+            <p>Training tools for AI models that work with both images and text. I maintain the code that runs their training and adaptation workflows.</p>
             <a class="text-link" href="https://github.com/Blaizzy/mlx-vlm">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
           <article class="project-card">
             <div class="project-meta"><span>Native Mac app</span><b aria-hidden="true">03</b></div>
             <h3>MLX-LoRA-Studio</h3>
-            <p>An open-source desktop app for fine-tuning, evaluating and managing language models on Apple Silicon.</p>
+            <p>An open-source Mac app for adapting language models to new tasks, checking their results and managing models on Apple chips.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/MLX-LoRA-Studio">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
           <article class="project-card">
@@ -524,25 +524,25 @@
           <article class="project-card">
             <div class="project-meta"><span>Interpretability</span><b aria-hidden="true">05</b></div>
             <h3>MLX-LM-LENS</h3>
-            <p>A research tool for examining hidden states, attention and embeddings in MLX language models.</p>
+            <p>A research tool for looking inside language models: how they represent words, which parts of the input they focus on, and how information moves through them.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/mlx-lm-lens">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
           <article class="project-card">
             <div class="project-meta"><span>Local AI</span><b aria-hidden="true">06</b></div>
             <h3>Local NotebookLM</h3>
-            <p>A local-first, PDF-grounded notebook for creating audio summaries with configurable model and speech backends.</p>
+            <p>A notebook that uses your PDFs as the source for summaries and creates audio versions with language and speech tools you choose.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/Local-NotebookLM">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
           <article class="project-card">
             <div class="project-meta"><span>Model editing</span><b aria-hidden="true">07</b></div>
             <h3>Gabliteration</h3>
-            <p>Research and tooling for searching configurations for selective behavioral changes in language models.</p>
+            <p>Research and tools for finding model edits that change selected behaviors while aiming to keep other abilities intact.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/gabliteration">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
           <article class="project-card">
             <div class="project-meta"><span>MLX research</span><b aria-hidden="true">08</b></div>
             <h3>MLX-KAN</h3>
-            <p>An Apple Silicon implementation of Kolmogorov–Arnold Networks using the MLX framework.</p>
+            <p>An implementation of Kolmogorov–Arnold Networks, an alternative model design built from simple, learnable functions, using Apple’s MLX toolkit.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/mlx-kan">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
         </div>
@@ -565,7 +565,7 @@
                 <h3>System Engineer</h3>
               </div>
               <div>
-                <p>System Engineer focused on ML engineering and MLOps.</p>
+                <p>System Engineer focused on building machine-learning software and keeping it reliable after deployment. MLOps covers the tools and practices for shipping, monitoring and maintaining AI systems.</p>
                 <p class="subcopy">In my free time, I contribute to open source and pursue ML research and engineering.</p>
               </div>
             </article>
