@@ -10,6 +10,7 @@
     <meta property="og:url" content="https://goekdeniz-guelmez.goekdenizguelmez.chatgpt.site/">
     <meta property="og:title" content="Gökdeniz Gülmez — MLX, local AI &amp; open source">
     <meta property="og:description" content="MLX-LM contributor and sole maintainer of the MLX-VLM trainer, building local AI and J.O.S.I.E. projects for Apple Silicon.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@5.0.1/bundled/locomotive-scroll.css">
     <title>Gökdeniz Gülmez — MLX, local AI &amp; open source</title>
     <style>
       :root {
@@ -347,6 +348,20 @@
         footer .shell { flex-direction: column; gap: 5px; }
       }
       @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+
+      .section-heading-plain { grid-template-columns: 1fr; }
+      html.has-locomotive-scroll .scroll-reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.65,.25,1); }
+      html.has-locomotive-scroll .scroll-reveal.is-inview { opacity: 1; transform: translateY(0); }
+      html.has-locomotive-scroll [data-scroll-speed] { will-change: transform; }
+      .ecosystem-panel { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; margin-top: 25px; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .ecosystem-panel .source-label { color: var(--accent); }
+      .ecosystem-panel h3 { margin: 9px 0 0; font-size: 21px; line-height: 1.18; letter-spacing: -.04em; }
+      .ecosystem-panel p { max-width: 780px; margin: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+      .ecosystem-models { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+      .ecosystem-models span { width: 100%; color: var(--muted); font: 500 8px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+      .ecosystem-models b { padding: 5px 8px; border: 1px solid var(--line); border-radius: 2px; color: #514a44; font: 550 9px var(--mono); }
+      @media (max-width: 760px) { .ecosystem-panel { grid-template-columns: 1fr; align-items: start; gap: 4px; } }
+      @media (prefers-reduced-motion: reduce) { html.has-locomotive-scroll .scroll-reveal, html.has-locomotive-scroll .scroll-reveal.is-inview { opacity: 1; transform: none; transition: none; } }
     </style>
   </head>
   <body>
@@ -369,7 +384,7 @@
 
     <main>
       <section class="shell hero" aria-labelledby="hero-title">
-        <figure class="hero-portrait">
+        <figure class="hero-portrait" data-scroll data-scroll-speed="0.08">
           <img src="assets/profile-portrait.png" alt="Portrait of Gökdeniz Gülmez" width="1040" height="1512" fetchpriority="high">
           <figcaption>Open source · Apple Silicon</figcaption>
         </figure>
@@ -392,13 +407,12 @@
       </section>
 
       <section class="shell section" id="about" aria-labelledby="about-title">
-        <div class="section-heading">
-          <p class="kicker">01 / About</p>
+        <div class="section-heading section-heading-plain scroll-reveal" data-scroll>
           <h2 id="about-title">I help run and train AI<br>on Apple chips.</h2>
         </div>
         <div class="intro-grid">
-          <p class="intro-copy">At Computacenter, I work as a System Engineer focused on <strong>machine-learning engineering and MLOps</strong>—the work of deploying, monitoring and maintaining software that uses AI. Outside work, I contribute to open source and conduct ML research. Apple’s <strong>MLX tools</strong> let developers build, train and run models on Apple chips. My contributions help those tools support more models and make it easier to teach them new tasks, including models that understand both images and words.</p>
-          <div class="focus-panel" aria-label="Technical interests">
+          <p class="intro-copy scroll-reveal" data-scroll>At Computacenter, I work as a System Engineer focused on <strong>machine-learning engineering and MLOps</strong>—the work of deploying, monitoring and maintaining software that uses AI. Outside work, I contribute to open source and conduct ML research. Apple’s <strong>MLX framework</strong> is a foundation for building, training and running machine-learning models on Apple chips. MLX-LM adds text language models; MLX-VLM adds models that work with images and words. My contributions help those libraries support more models and training methods.</p>
+          <div class="focus-panel scroll-reveal" data-scroll aria-label="Technical interests">
             <div class="focus-item"><small>01 / Systems</small><span>ML engineering &amp; MLOps</span></div>
             <div class="focus-item"><small>02 / Runtime</small><span>Run models on Apple devices</span></div>
             <div class="focus-item"><small>03 / Training</small><span>Adapt models to new tasks</span></div>
@@ -409,27 +423,27 @@
 
       <section class="impact-section section" id="impact" aria-labelledby="impact-title">
         <div class="shell">
-          <div class="section-heading">
+          <div class="section-heading scroll-reveal" data-scroll>
             <p class="kicker">02 / Selected impact</p>
             <h2 id="impact-title">Built for scale.<br>Proven in real use.</h2>
           </div>
           <div class="impact-grid">
-            <article class="impact-card">
+            <article class="impact-card scroll-reveal" data-scroll>
               <span class="impact-value">Top 5</span>
               <h3>MLX-LM contributor</h3>
               <p>Around 10,000 lines of code contributed to Apple’s open-source language model toolkit.</p>
             </article>
-            <article class="impact-card">
+            <article class="impact-card scroll-reveal" data-scroll>
               <span class="impact-value">25+</span>
               <h3>Model variants supported</h3>
               <p>MLX-LM architecture work spanning more than 15 organizations.</p>
             </article>
-            <article class="impact-card">
+            <article class="impact-card scroll-reveal" data-scroll>
               <span class="impact-value">Sole</span>
               <h3>MLX-VLM trainer maintainer</h3>
               <p>Built out SFT, DPO, ORPO and GRPO workflows. MTP and QAT are in open pull requests as the trainer expands to more modalities.</p>
             </article>
-            <article class="impact-card">
+            <article class="impact-card scroll-reveal" data-scroll>
               <span class="impact-value">100+</span>
               <h3>Tool calls in one JOSIE-Voice demo</h3>
               <p>A six-minute MacBook Pro M4 Pro call, shown in the teaser below, with on-device speech models and a cloud reasoning model.</p>
@@ -440,44 +454,55 @@
       </section>
       <section class="work-section" id="contributions" aria-labelledby="contrib-title">
         <div class="shell section">
-          <div class="section-heading">
+          <div class="section-heading scroll-reveal" data-scroll>
             <p class="kicker">03 / Upstream</p>
           <h2 id="contrib-title">I make AI work<br>on Apple chips.</h2>
           </div>
           <p class="contrib-lede">MLX is Apple’s open-source toolkit for machine learning. The tools around it help people run and train AI models directly on Apple chips. Here are some of my credited contributions.</p>
           <div class="contrib-grid">
-            <article class="contrib-card">
+            <article class="contrib-card scroll-reveal" data-scroll>
               <div class="card-top"><span class="number">01</span><span class="source-label">Core framework · MLX</span></div>
               <h3>New training primitives</h3>
               <p>I added Muon, a method for updating a model as it learns, and ReLU², a small mathematical function used inside neural networks. Both are credited in MLX’s contributor acknowledgements.</p>
               <a class="text-link" href="https://github.com/ml-explore/mlx/blob/main/ACKNOWLEDGMENTS.md">See MLX acknowledgements <span aria-hidden="true">↗</span></a>
             </article>
-            <article class="contrib-card">
+            <article class="contrib-card scroll-reveal" data-scroll>
               <div class="card-top"><span class="number">02</span><span class="source-label">Language models · MLX-LM</span></div>
               <h3>Support for 20+ model designs</h3>
-              <p>MLX-LM is Apple’s toolkit for running and training text-generating AI models. I’m one of its top five contributors, with around 10,000 lines of code added in total. I helped it support more than 20 model designs, and added ways to train every learned value in a model, choose between training methods, and track experiments with Weights &amp; Biases, a tool for recording and comparing training runs. A model design is its internal blueprint; the list below links to the original model files and code changes.</p>
+              <p>MLX-LM is an open-source library in Apple’s MLX ecosystem for running and fine-tuning text-based language models on Apple Silicon. I’m one of its top five contributors, with around 10,000 lines of code added in total. I helped it support more than 20 model designs, and added ways to train every learned value in a model, choose between training methods, and track experiments with Weights &amp; Biases, a tool for recording and comparing training runs. A model design is its internal blueprint; the list below links to the original model files and code changes.</p>
               <a class="text-link" href="https://github.com/ml-explore/mlx-lm/blob/main/ACKNOWLEDGMENTS.md">Read MLX-LM credits <span aria-hidden="true">↗</span></a>
             </article>
-            <article class="contrib-card">
+            <article class="contrib-card scroll-reveal" data-scroll>
               <div class="card-top"><span class="number">03</span><span class="source-label">Vision-language · MLX-VLM</span></div>
               <h3>Sole maintainer of the trainer</h3>
-              <p>MLX-VLM works with models that handle both images and words. I’m the sole maintainer of its training engine. I rebuilt the backend to support multiple modalities and added SFT, DPO, ORPO and GRPO training. MTP and QAT are in open pull requests, with more modalities and algorithms planned.</p>
+              <p>MLX-VLM extends the MLX ecosystem to vision-language models that understand images and text together. It provides command-line and Python tools, a chat interface and an API server for running models. I’m the sole maintainer of its training engine, which supports SFT, DPO, ORPO and GRPO. MTP and QAT are in open pull requests, with more modalities and algorithms planned.</p>
               <a class="text-link" href="https://github.com/Blaizzy/mlx-vlm">Explore MLX-VLM <span aria-hidden="true">↗</span></a>
               <a class="text-link" href="#references">See selected trainer PRs <span aria-hidden="true">↘</span></a>
             </article>
-            <article class="contrib-card">
+            <article class="contrib-card scroll-reveal" data-scroll>
               <div class="card-top"><span class="number">04</span><span class="source-label">Examples · MLX Examples</span></div>
               <h3>Workflows people can run</h3>
               <p>MLX Examples offers practical, runnable demonstrations. Its acknowledgements credit my work bringing several models to the examples and adding full training, which adjusts all of a model’s learned values.</p>
               <a class="text-link" href="https://github.com/ml-explore/mlx-examples/blob/main/ACKNOWLEDGMENTS.md">Read MLX Examples credits <span aria-hidden="true">↗</span></a>
             </article>
           </div>
-          <div class="architecture-panel">
+          <aside class="ecosystem-panel scroll-reveal" data-scroll aria-label="MLX libraries in apps and model ecosystem">
+            <div>
+              <span class="source-label">App integration · LM Studio</span>
+              <h3>Open-source libraries, used inside real apps.</h3>
+              <p>MLX-LM and MLX-VLM are developer libraries. LM Studio’s open-source MLX engine uses MLX-LM for text generation and MLX-VLM for vision models, bringing compatible models to desktop chat and local APIs. Model families represented in MLX support work include DeepSeek, Alibaba Qwen, Mistral AI, NVIDIA and IBM.</p>
+              <div class="ecosystem-models" aria-label="Model organizations represented in MLX support work">
+                <span>Model organizations represented</span>
+                <b>DeepSeek</b><b>Alibaba Qwen</b><b>Mistral AI</b><b>NVIDIA</b><b>IBM</b>
+              </div>
+            </div>
+            <a class="text-link" href="https://lmstudio.ai/blog/unified-mlx-engine">Read LM Studio’s MLX engine write-up <span aria-hidden="true">↗</span></a>
+          </aside>
+          <div class="architecture-panel scroll-reveal" data-scroll>
             <span class="source-label">Model architecture support · MLX-LM</span>
             <h3>20+ model variants across 15+ organizations.</h3>
             <p>MLX-LM credits my work on these 25+ model variants from 15+ organizations. An architecture is a model’s internal design; weights are the learned values that let it work. “Weights” links to original model files. “PR” means pull request: a proposed code change and its review.</p>
             <ul class="architecture-list" aria-label="MLX-LM model architectures, original weights, and pull requests">
-              DeepSeek's DeepSeek v4.1, State-Space's Mamba v1 and Mamba v2, Z.ai & THUKEG's GLM, GLM4, GLM5 (GLM MoE DSA), Rednote dots.llm1, Baidu's Ernie4.5 MoE, inclusionAI's Bailing MoE e.g. Ling-family, Bailing MoE Linear e.g. Ling-Linear-family, Klear team - Kuaishou Technology's Klear, AI21 Lab's Jamba IBM's Granite MoE, Mistral AI's Mistral4, Meituan's LongCat, Nvidia's Nemotron H, Swiss-AI's Apertus, Nikity's Lille130m, Alibaba Qwen's Qwen3Next, Tele-AI's TeleChat3, and Allenai's OLMoE and Olmo 3; Helped add support for the following model architectures: Alibaba Qwen's Qwen3 & Qwen3MoE); Added support for the following training algorithms: Full Weight Fine-Tuning, and the Muon optimizer; Added support for the following other features: Multiple Optimizers to choose for training, and reporting training metrics to WandB (Weights & Biases).
               <li><span class="architecture-org">OpenBMB</span><div><p class="architecture-models">MiniCPM · MiniCPM3</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/collections/openbmb/minicpm">MiniCPM family</a> · <b>PRs</b> <a href="https://github.com/ml-explore/mlx-examples/pull/685">#685</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/24">#24</a></p></div></li>
               <li><span class="architecture-org">Alibaba Qwen</span><div><p class="architecture-models">Qwen3Next</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/collections/Qwen/qwen3-next">Qwen3 Next</a> · <b>PRs</b> <a href="https://github.com/ml-explore/mlx-lm/pull/441">#441</a> · <a href="https://github.com/ml-explore/mlx-lm/pull/453">#453</a></p></div></li>
               <li><span class="architecture-org">Alibaba Qwen</span><div><p class="architecture-models">Qwen3</p><p class="architecture-links"><b>Weights</b> <a href="https://huggingface.co/collections/Qwen/qwen3">Qwen3</a> · <b>PRs</b> <a href="https://github.com/ml-explore/mlx-lm/pull/42">#42</a></p></div></li>
@@ -508,24 +533,24 @@
       </section>
 
       <section class="shell section" id="research" aria-labelledby="research-title">
-        <div class="section-heading">
+        <div class="section-heading scroll-reveal" data-scroll>
           <p class="kicker">04 / Research</p>
           <h2 id="research-title">Researching how<br>models learn and act.</h2>
         </div>
         <div class="research-grid">
-          <article class="research-card">
+          <article class="research-card scroll-reveal" data-scroll>
             <span class="source-label">Preprint · 2026</span>
             <h3>DynaMoE</h3>
             <p>A model with several specialist parts that can activate different experts for different inputs. DynaMoE studies whether choosing those specialists dynamically can help a model use its computing resources more efficiently.</p>
             <a class="text-link" href="https://arxiv.org/abs/2603.01697">Read the paper <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="research-card">
+          <article class="research-card scroll-reveal" data-scroll>
             <span class="source-label">Preprint · 2025</span>
             <h3>Gabliteration</h3>
             <p>A method for changing selected model behaviors by editing its learned values, while checking that other abilities still work well.</p>
             <a class="text-link" href="https://arxiv.org/abs/2512.18901">Read the paper <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="research-card">
+          <article class="research-card scroll-reveal" data-scroll>
             <span class="source-label">AI training method · ongoing</span>
             <h3>Learning from preferred answers</h3>
             <p>Directional and Similarity-aware Latent Alignment (DSLA) studies how feedback about better answers can also shape the patterns a model forms internally while processing text.</p>
@@ -535,11 +560,11 @@
       </section>
 
       <section class="shell section" id="models" aria-labelledby="models-title">
-        <div class="section-heading">
+        <div class="section-heading scroll-reveal" data-scroll>
           <p class="kicker">05 / Model family</p>
           <h2 id="models-title">J.O.S.I.E. —<br>models with character.</h2>
         </div>
-        <div class="model-family">
+        <div class="model-family scroll-reveal" data-scroll>
           <div>
             <span class="source-label">My open model family · Hugging Face</span>
             <h3>Reasoning-first models, built locally.</h3>
@@ -558,12 +583,12 @@
       </section>
 
       <section class="shell section" id="josie-voice" aria-labelledby="voice-title">
-        <div class="section-heading">
+        <div class="section-heading scroll-reveal" data-scroll>
           <p class="kicker">06 / JOSIE-Voice</p>
           <h2 id="voice-title">Talk to your Mac.<br>Let it take action.</h2>
         </div>
         <div class="voice-layout">
-          <div class="voice-summary">
+          <div class="voice-summary scroll-reveal" data-scroll>
             <span class="voice-status">In development · macOS · Apple Silicon</span>
             <h3>A voice and chat assistant built around local speech.</h3>
             <p>JOSIE-Voice listens and speaks on your Mac, remembers conversations, and can act in Reminders, Calendar, Maps and Messages. The teaser shows a six-minute call on an M4 Pro with more than 100 tool calls: Qwen-3 0.6B handles on-device speech recognition and text-to-speech, while DeepSeek 4.1 Flash runs through Ollama Cloud.</p>
@@ -572,7 +597,7 @@
               <a class="text-link" href="https://goekdeniz-guelmez.github.io/JOSIE-Voice/">Visit the project site <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-          <div class="voice-demo">
+          <div class="voice-demo scroll-reveal" data-scroll>
             <span class="source-label">Teaser · October 18, 2026</span>
             <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here is a 6 minute call within JOSIE-Voice on a MacBook Pro M4 Pro using: Qwen-3 0.6B TTS/ASR 4bit and Deepseek 4.1 Flash on ollama cloud. it does 100+ Tool calls with agentic work in the real world. No cuts or speedup's. <a href="https://t.co/xlkTtYk3oQ">https://t.co/xlkTtYk3oQ</a></p>&mdash; Gökdeniz Gülmez (@ActuallyIsaak) <a href="https://x.com/ActuallyIsaak/status/2111818137947852897?ref_src=twsrc%5Etfw">October 18, 2026</a></blockquote>
             <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
@@ -580,68 +605,68 @@
         </div>
       </section>
       <section class="shell section" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading">
+        <div class="section-heading scroll-reveal" data-scroll>
           <p class="kicker">07 / Selected work</p>
           <h2 id="projects-title">Tools, models<br>&amp; experiments.</h2>
         </div>
         <div class="project-grid">
-          <article class="project-card featured">
+          <article class="project-card featured scroll-reveal" data-scroll>
             <div class="project-meta"><span>Training toolkit</span><b aria-hidden="true">01</b></div>
             <h3>MLX-LM-LoRA</h3>
             <p>Tools for adapting language models to new tasks on Apple chips. Fine-tuning continues a model’s training with new examples; LoRA does this by learning a small add-on instead of changing every value in the original model.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/mlx-lm-lora">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="project-card">
+          <article class="project-card scroll-reveal" data-scroll>
             <div class="project-meta"><span>Vision-language training</span><b aria-hidden="true">02</b></div>
             <h3>MLX-VLM</h3>
-            <p>A multi-modal training engine that I maintain, with SFT, DPO, ORPO and GRPO workflows. MTP and QAT are in open pull requests as the trainer expands to more modalities.</p>
+            <p>MLX-VLM runs and trains models that work with images and text on Apple Silicon. I maintain its training engine, with SFT, DPO, ORPO and GRPO workflows. MTP and QAT are in open pull requests as the trainer expands to more modalities.</p>
             <a class="text-link" href="https://github.com/Blaizzy/mlx-vlm">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="project-card">
+          <article class="project-card scroll-reveal" data-scroll>
             <div class="project-meta"><span>Native Mac app</span><b aria-hidden="true">03</b></div>
             <h3>MLX-LoRA-Studio</h3>
             <p>An open-source Mac app for adapting language models to new tasks, checking their results and managing models on Apple chips.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/MLX-LoRA-Studio">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="project-card">
+          <article class="project-card scroll-reveal" data-scroll>
             <div class="project-meta"><span>Model research</span><b aria-hidden="true">04</b></div>
             <h3>J.O.S.I.E.</h3>
             <p>A personal model family exploring small language models, reasoning and assistant behavior, with releases and research notes on Hugging Face.</p>
             <a class="text-link" href="https://huggingface.co/collections/Goekdeniz-Guelmez/josie">Explore J.O.S.I.E. <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="project-card">
+          <article class="project-card scroll-reveal" data-scroll>
             <div class="project-meta"><span>Mac voice assistant</span><b aria-hidden="true">05</b></div>
             <h3>JOSIE-Voice</h3>
             <p>An in-development Mac voice and chat assistant with on-device speech recognition and speech, conversation memory, and actions in everyday apps.</p>
             <a class="text-link" href="#josie-voice">See the teaser <span aria-hidden="true">↘</span></a>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/JOSIE-Voice">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="project-card">
+          <article class="project-card scroll-reveal" data-scroll>
             <div class="project-meta"><span>Alignment research</span><b aria-hidden="true">06</b></div>
             <h3>DSLA</h3>
             <p>Directional and Similarity-aware Latent Alignment studies how preference feedback can shape a model’s internal representations as well as its answers.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/DSLA/blob/main/DSLA-paper-draft-9.pdf">Read the paper draft <span aria-hidden="true">↗</span></a>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/DSLA">Explore DSLA <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="project-card">
+          <article class="project-card scroll-reveal" data-scroll>
             <div class="project-meta"><span>Interpretability</span><b aria-hidden="true">07</b></div>
             <h3>MLX-LM-LENS</h3>
             <p>A research tool for looking inside language models: how they represent words, which parts of the input they focus on, and how information moves through them.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/mlx-lm-lens">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="project-card">
+          <article class="project-card scroll-reveal" data-scroll>
             <div class="project-meta"><span>Local AI</span><b aria-hidden="true">08</b></div>
             <h3>Local NotebookLM</h3>
             <p>A notebook that uses your PDFs as the source for summaries and creates audio versions with language and speech tools you choose.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/Local-NotebookLM">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="project-card">
+          <article class="project-card scroll-reveal" data-scroll>
             <div class="project-meta"><span>Model editing</span><b aria-hidden="true">09</b></div>
             <h3>Gabliteration</h3>
             <p>Research and tools for finding model edits that change selected behaviors while aiming to keep other abilities intact.</p>
             <a class="text-link" href="https://github.com/Goekdeniz-Guelmez/gabliteration">Explore the project <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="project-card">
+          <article class="project-card scroll-reveal" data-scroll>
             <div class="project-meta"><span>MLX research</span><b aria-hidden="true">10</b></div>
             <h3>MLX-KAN</h3>
             <p>An implementation of Kolmogorov–Arnold Networks, an alternative model design built from simple, learnable functions, using Apple’s MLX toolkit.</p>
@@ -661,7 +686,7 @@
           <p class="kicker">08 / Career</p>
           <div>
             <h2 id="career-title" class="visually-hidden">Career</h2>
-            <article class="career-card">
+            <article class="career-card scroll-reveal" data-scroll>
               <div>
                 <span class="employer">Computacenter</span>
                 <h3>System Engineer</h3>
@@ -676,11 +701,11 @@
       </section>
 
       <section class="shell section references" id="references" aria-labelledby="references-title">
-        <div class="section-heading">
+        <div class="section-heading scroll-reveal" data-scroll>
           <p class="kicker">09 / References</p>
           <h2 id="references-title">Upstream credits,<br>papers &amp; releases.</h2>
         </div>
-        <div class="reference-grid">
+        <div class="reference-grid scroll-reveal" data-scroll>
           <a href="https://github.com/ml-explore/mlx/blob/main/ACKNOWLEDGMENTS.md">Core MLX acknowledgements<span>Framework credits</span></a>
           <a href="https://github.com/ml-explore/mlx-lm/blob/main/ACKNOWLEDGMENTS.md">MLX-LM acknowledgements<span>Architectures &amp; training</span></a>
           <a href="https://github.com/ml-explore/mlx-examples/blob/main/ACKNOWLEDGMENTS.md">MLX Examples acknowledgements<span>Examples &amp; fine-tuning</span></a>
@@ -717,5 +742,19 @@
     </main>
 
     <footer><div class="shell"><span>© <span id="year">2026</span> Gökdeniz Gülmez</span><span>Built around open work &amp; public sources</span></div></footer>
+    <script type="module">
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        import('https://cdn.jsdelivr.net/npm/locomotive-scroll@5.0.1/+esm')
+          .then(({ default: LocomotiveScroll }) => {
+            try {
+              new LocomotiveScroll();
+              document.documentElement.classList.add('has-locomotive-scroll');
+            } catch {
+              document.documentElement.classList.remove('has-locomotive-scroll');
+            }
+          })
+          .catch(() => document.documentElement.classList.remove('has-locomotive-scroll'));
+      }
+    </script>
   </body>
 </html>
