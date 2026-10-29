@@ -1,0 +1,6 @@
+# Local tooling and editor state
+.claude/
+.openai/
+.vscode/
+.idea/
+.DS_Store
