@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Velora: built for Apple silicon</title>
+<meta name="description" content="How Velora compares with Plex and Jellyfin, and why it's built only for the Mac and Apple devices.">
+<meta name="theme-color" content="#0E0E10">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div><div class="mist" aria-hidden="true"></div>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><span class="tile"><span data-mark style="width:30px;height:30px"></span></span>Velora</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" class="nav" aria-label="Main"><a href="index.html#surfaces">Features</a><a href="why.html" aria-current="page">Why Velora</a><a href="download.html">Download</a><a href="docs/index.html">Docs</a><a href="investors.html">Investors</a></nav>
+</div></header>
+<main id="main">
+
+<div class="wrap hero" style="padding-bottom:12px">
+  <span class="eyebrow">Why Velora</span>
+  <h1>Built for Apple silicon, not ported to it.</h1>
+  <p class="lede">Plex and Jellyfin are excellent media servers that run almost anywhere. Velora makes a different trade: it runs only on the Mac and only for Apple devices, so it can use the hardware and frameworks Apple builds into every one of them.</p>
+  <div class="cta"><a class="btn btn-primary" href="https://github.com/Goekdeniz-Guelmez/goekdeniz-guelmez.github.io/releases/download/velora-v2.0.0/VeloraServer.dmg">Download for Mac</a></div>
+</div>
+<section><div class="wrap">
+  <div class="grid">
+    <div class="card"><h3>Native from server to screen</h3><p>The server is a Swift app built for macOS, and every client is SwiftUI with Apple's own player, Liquid Glass, Live Activities, Top Shelf, SharePlay and system sharing. Nothing is a web view in a wrapper.</p></div>
+    <div class="card"><h3>Apple silicon does the heavy lifting</h3><p>Transcoding uses VideoToolbox, the hardware media engine in every Apple silicon Mac, with no extra license to unlock it. Audiobook voices run on-device with MLX.</p></div>
+    <div class="card"><h3>Quiet, efficient, already yours</h3><p>A Mac mini on a shelf is silent and sips power when idle. You don't need a separate NAS or a PC running all day.</p></div>
+    <div class="card"><h3>No account with anyone</h3><p>Velora doesn't sign you in to a company cloud. Your devices talk to your Mac directly, and nothing leaves your network unless you turn on a feature that needs to.</p></div>
+    <div class="card"><h3>More than video</h3><p>Books and PDFs with Apple Pencil notes, audiobooks with chapters and speed, synced lyrics, and Create Audio for turning documents into listenable audio.</p></div>
+    <div class="card"><h3>Ready for AI assistants</h3><p>A built-in MCP server lets an assistant you choose search your library and control playback, with scoped tokens and no destructive tools.</p></div>
+  </div>
+</div></section>
+<section><div class="wrap prose">
+  <span class="eyebrow">Side by side</span><h2>Velora, Plex and Jellyfin</h2>
+  <table>
+  <tr><th></th><th>Velora</th><th>Plex</th><th>Jellyfin</th></tr>
+  <tr><td>Server platforms</td><td>Mac (Apple silicon)</td><td>Windows, macOS, Linux, NAS</td><td>Windows, macOS, Linux, NAS</td></tr>
+  <tr><td>Server built natively for macOS</td><td><span class="pill ok">Yes</span></td><td><span class="pill">No</span> (cross-platform)</td><td><span class="pill">No</span> (cross-platform .NET)</td></tr>
+  <tr><td>Account with a company required</td><td><span class="pill">No</span></td><td><span class="pill ok">Yes</span> Plex account</td><td><span class="pill">No</span></td></tr>
+  <tr><td>Hardware transcoding</td><td><span class="pill ok">Yes</span> VideoToolbox, included</td><td><span class="pill ok">Yes</span> with Plex Pass</td><td><span class="pill ok">Yes</span> free</td></tr>
+  <tr><td>Native apps for iPhone, iPad, Mac, Apple TV and Vision Pro</td><td><span class="pill ok">Yes</span> SwiftUI, one design</td><td><span class="pill soon">Partly</span> official apps, cross-platform design</td><td><span class="pill soon">Partly</span> community apps</td></tr>
+  <tr><td>Books and PDFs with Apple Pencil notes</td><td><span class="pill ok">Yes</span></td><td><span class="pill">No</span></td><td><span class="pill soon">Partly</span> books, no Pencil notes</td></tr>
+  <tr><td>On-device audiobook creation</td><td><span class="pill ok">Yes</span> MLX + Phonon</td><td><span class="pill">No</span></td><td><span class="pill">No</span></td></tr>
+  <tr><td>Built-in MCP server for AI assistants</td><td><span class="pill ok">Yes</span></td><td><span class="pill">No</span></td><td><span class="pill">No</span></td></tr>
+  <tr><td>Android, smart TVs, game consoles</td><td><span class="pill">No</span> (web app only)</td><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Yes</span></td></tr>
+  <tr><td>Plugin ecosystem and years of maturity</td><td><span class="pill">No</span> new in 2026</td><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Yes</span></td></tr>
+  </table>
+  <p class="note">Based on publicly available information as of November 2026; features and plans of other products change. Plex and Jellyfin are trademarks of their respective owners. Velora is not affiliated with either.</p>
+  <h2>Which should you choose?</h2>
+  <ul>
+  <li><strong>Choose Velora</strong> if your home runs on Apple devices, you have an Apple silicon Mac, and you want everything to feel like it was made by the same hands, without a cloud account.</li>
+  <li><strong>Choose Plex</strong> if you need apps on almost every device ever made, or want its built-in free streaming channels.</li>
+  <li><strong>Choose Jellyfin</strong> if you want a free, open-source server on Linux or a NAS, or a big plugin ecosystem.</li>
+  </ul>
+</div></section>
+
+</main>
+<footer><div class="wrap">
+<div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="docs/privacy.html">Privacy</a> · © 2026 Gökdeniz Gülmez</div>
+<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a>
+</div></footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy: Velora docs</title>
+<meta name="description" content="Velora documentation: Privacy.">
+<meta name="theme-color" content="#0E0E10">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div><div class="mist" aria-hidden="true"></div>
+<header class="top"><div class="wrap">
+<a class="brand" href="../index.html"><span class="tile"><span data-mark style="width:30px;height:30px"></span></span>Velora</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" class="nav" aria-label="Main"><a href="../index.html#surfaces">Features</a><a href="../why.html">Why Velora</a><a href="../download.html">Download</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../investors.html">Investors</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap docs"><nav class="side" aria-label="Documentation"><a href="index.html">Getting started</a><a href="platforms.html">Features by platform</a><a href="create-audio.html">Create Audio</a><a href="mcp.html">MCP setup</a><a href="multi-server.html">Multi-server</a><a href="privacy.html" aria-current="page">Privacy</a><a href="faq.html">FAQ</a></nav><article class="prose">
+<h1>Privacy</h1>
+<p>Velora is self-hosted. Your media, your accounts and your watch history live on your Mac. There's no Velora cloud and no telemetry.</p>
+<h2>What can leave your network, and when</h2>
+<table><tr><th>Feature</th><th>Sent to</th><th>What is sent</th><th>When</th></tr>
+<tr><td>Movie and TV metadata</td><td>TMDB</td><td>Title, year, season and episode</td><td>Only if you add a TMDB key</td></tr>
+<tr><td>Music metadata and covers</td><td>MusicBrainz, Cover Art Archive</td><td>Artist, album, track</td><td>Only if enabled</td></tr>
+<tr><td>Book metadata and covers</td><td>Open Library</td><td>Title, author, ISBN</td><td>Only if enabled</td></tr>
+<tr><td>Create Audio script step</td><td>The AI provider your admin chose</td><td>Text of the sources being turned into audio</td><td>Only with a cloud provider. Nativ and Ollama stay on your Mac.</td></tr>
+<tr><td>Phonon voice download</td><td>Hugging Face</td><td>Download request</td><td>When voices are downloaded</td></tr>
+<tr><td>MCP</td><td>The assistant you connect</td><td>Results of the tools it calls</td><td>Only if you turn MCP on</td></tr></table>
+<p>Metadata providers <strong>never</strong> receive file paths, file names, sizes or hashes. Lyrics are read from local files only. Velora never modifies your media.</p>
+</article></div>
+</main>
+<footer><div class="wrap">
+<div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="../docs/privacy.html">Privacy</a> · © 2026 Gökdeniz Gülmez</div>
+<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
