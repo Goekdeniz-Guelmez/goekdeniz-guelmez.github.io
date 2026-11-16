@@ -6,6 +6,9 @@
 <title>Multi-server: Velora docs</title>
 <meta name="description" content="Velora documentation: Multi-server.">
 <meta name="theme-color" content="#0E0E10">
+<meta property="og:title" content="Multi-server: Velora docs">
+<meta property="og:description" content="Velora documentation: Multi-server.">
+<meta property="og:image" content="../assets/screens/web-home.webp">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/site.css">
 </head>
@@ -13,14 +16,14 @@
 <a class="skip" href="#main">Skip to content</a>
 <div class="sky" aria-hidden="true"></div><div class="mist" aria-hidden="true"></div>
 <header class="top"><div class="wrap">
-<a class="brand" href="../index.html"><span class="tile"><span data-mark style="width:30px;height:30px"></span></span>Velora</a>
+<a class="brand" href="../index.html" aria-label="Velora home"><span class="tile" data-mark data-small></span>Velora</a>
 <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav id="nav" class="nav" aria-label="Main"><a href="../index.html#surfaces">Features</a><a href="../why.html">Why Velora</a><a href="../download.html">Download</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../investors.html">Investors</a></nav>
+<nav id="nav" class="nav" aria-label="Main"><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">AI</a><a href="../server.html">Server</a><a href="../compare.html">Compare</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../download.html">Download</a></nav>
 </div></header>
 <main id="main">
-<div class="wrap docs"><nav class="side" aria-label="Documentation"><a href="index.html">Getting started</a><a href="platforms.html">Features by platform</a><a href="create-audio.html">Create Audio</a><a href="mcp.html">MCP setup</a><a href="multi-server.html" aria-current="page">Multi-server</a><a href="privacy.html">Privacy</a><a href="faq.html">FAQ</a></nav><article class="prose">
+<div class="wrap docs"><nav class="side" aria-label="Documentation"><a href="index.html">Setup</a><a href="media-folders.html">Adding media folders</a><a href="users.html">Users and devices</a><a href="ai-models.html">AI models</a><a href="music-generation.html">Music generation</a><a href="create-audio.html">Create Audio</a><a href="jellyfin.html">Jellyfin</a><a href="platforms.html">Features by platform</a><a href="mcp.html">MCP setup</a><a href="multi-server.html" aria-current="page">Multi-server</a><a href="privacy.html">Privacy</a><a href="troubleshooting.html">Troubleshooting</a></nav><article class="prose">
 <h1>Multi-server</h1>
-<p>One Velora app can be signed in to several Velora servers, for example yours and a family member's, and show <strong>one merged library</strong>.</p>
+<p>One Velora app can be signed in to several servers, for example yours and a family member's, and show <strong>one merged library</strong>. Jellyfin servers can be added too.</p>
 <ul>
 <li>The same title on two servers appears once. Velora matches by provider IDs, or by title, year and length when unsure, and doesn't merge when in doubt.</li>
 <li>When you press play, Velora picks the best source: reachable, then direct play, then quality, then local network before remote. If a server drops out, it switches to the next one.</li>
@@ -29,9 +32,15 @@
 </ul>
 </article></div>
 </main>
-<footer><div class="wrap">
-<div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="../docs/privacy.html">Privacy</a> · © 2026 Gökdeniz Gülmez</div>
-<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a>
+<footer><div class="wrap foot">
+<div class="cols">
+<div><strong>Product</strong><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">Create with AI</a><a href="../server.html">Server</a></div>
+<div><strong>Compare</strong><a href="../compare.html">Velora, Plex, Jellyfin</a><a href="../requirements.html">System requirements</a><a href="../changelog.html">Changelog</a><a href="../faq.html">FAQ</a></div>
+<div><strong>Docs</strong><a href="../docs/index.html">Setup</a><a href="../docs/media-folders.html">Media folders</a><a href="../docs/ai-models.html">AI models</a><a href="../docs/troubleshooting.html">Troubleshooting</a></div>
+<div><strong>Language</strong><a href="../index.html" hreflang="en">English</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a></div>
+</div>
+<div class="fine"><div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="../docs/privacy.html">Privacy</a> · <a href="../investors.html">Investors</a> · © 2026 Gökdeniz Gülmez</div>
+<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a></div>
 </div></footer>
 <script src="../assets/site.js" defer></script>
 </body>

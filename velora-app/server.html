@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velora Server for Mac</title>
+<meta name="description" content="A native macOS media server: folders on any drive, users, hardware transcoding, AI models, Live Traffic and Activity.">
+<meta name="theme-color" content="#0E0E10">
+<meta property="og:title" content="Velora Server for Mac">
+<meta property="og:description" content="A native macOS media server: folders on any drive, users, hardware transcoding, AI models, Live Traffic and Activity.">
+<meta property="og:image" content="assets/screens/web-home.webp">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div><div class="mist" aria-hidden="true"></div>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Velora home"><span class="tile" data-mark data-small></span>Velora</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" class="nav" aria-label="Main"><a href="watch.html">Watch</a><a href="listen.html">Listen</a><a href="read.html">Read</a><a href="create.html">AI</a><a href="server.html" aria-current="page">Server</a><a href="compare.html">Compare</a><a href="docs/index.html">Docs</a><a href="download.html">Download</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap hero sub-hero"><span class="eyebrow">Velora Server for Mac</span><h1>The server is a Mac app.</h1><p class="lede">Not a web page in a box: a native macOS app that sets up in a few steps, keeps your library tidy, and tells you exactly what it's doing.</p><div class="cta"><a class="btn btn-primary" href="https://github.com/Goekdeniz-Guelmez/goekdeniz-guelmez.github.io/releases/download/velora-v2.6.0/VeloraServer-2.6.0.dmg">Download for Mac</a><a class="btn btn-ghost" href="docs/index.html">Setup guide</a></div></div>
+<section><div class="wrap">
+<div class="surface"><div class="txt"><span class="eyebrow">Setup</span><h3 class="big">Three steps.</h3><p class="sub">Create the admin account, link your media folders, and open the app on your devices. Velora recognises movies, series, music, audiobooks, books, papers and manga in the usual folder layouts, including Jellyfin's.</p></div><div class="pics n1"><figure class="shot wide"><img src="assets/screens/server-setup.webp" width="900" height="562" alt="Velora Server for Mac: Link your media, step two of setup" loading="lazy" decoding="async"><figcaption>Velora Server for Mac: Link your media, step two of setup</figcaption></figure></div></div>
+<div class="surface"><div class="txt"><span class="eyebrow">Libraries</span><h3 class="big">Folders on any drive, read only.</h3><p class="sub">Add folders from several drives to one library. Velora reads your files and never writes to them; artwork, previews, conversions and generated audio live in Velora's own data folder.</p><ul class="checks"><li>Rescan one library or all</li><li>Metadata and artwork from TMDB, TVmaze, MusicBrainz, Open Library, AniList, MangaDex, arXiv and more, each switchable</li><li>Lookups send titles and IDs, never file paths</li></ul></div><div class="pics n1"><figure class="shot wide"><img src="assets/screens/server-libraries.webp" width="1100" height="687" alt="Velora Server for Mac: Libraries" loading="lazy" decoding="async"><figcaption>Velora Server for Mac: Libraries</figcaption></figure></div></div>
+<div class="surface"><div class="txt"><span class="eyebrow">AI</span><h3 class="big">Every model in one place.</h3><p class="sub">The AI page lists language model connections (Nativ, Ollama or a cloud provider with your own key), the EmbeddingGemma 2 recommendations model, YuE2-3B for music, and the narration voices, with the memory each one needs.</p></div><div class="pics n1"><figure class="shot wide"><img src="assets/screens/server-ai.webp" width="1100" height="687" alt="Velora Server for Mac: the AI page" loading="lazy" decoding="async"><figcaption>Velora Server for Mac: the AI page</figcaption></figure></div></div>
+</div></section>
+<section><div class="wrap">
+<span class="eyebrow">Everything on the server</span><h2>What the Mac app manages</h2>
+<div class="grid"><div class="card"><h3>Overview</h3><p>Streams right now, recent activity, library counts and outbound traffic at a glance.</p></div><div class="card"><h3>Live Traffic</h3><p>Every stream, request and device, updated every second, as lanes or a map.</p></div><div class="card"><h3>Users and devices</h3><p>Accounts, roles, per-library access, who may create audio or music, and every signed-in device you can revoke.</p></div><div class="card"><h3>Playback</h3><p>Direct play versus conversion, hardware transcoding with VideoToolbox, and a request log with Show Logs.</p></div><div class="card"><h3>Storage</h3><p>How much each library and each cache uses, with one-click cleanup of caches Velora can rebuild.</p></div><div class="card"><h3>Activity</h3><p>Scans, metadata, previews, embeddings, narration and music jobs, with pause, retry and cancel.</p></div><div class="card"><h3>Integrations</h3><p>TMDB key, metadata providers, and the MCP server for AI assistants with scoped tokens.</p></div><div class="card"><h3>Review</h3><p>Suggested titles, matches and tags from library cleanup, to accept, edit or undo.</p></div></div>
+<p class="note">The wall-mount dashboard in the web app was removed in 2.6. Live Traffic stays in the Mac app.</p>
+</div></section>
+
+</main>
+<footer><div class="wrap foot">
+<div class="cols">
+<div><strong>Product</strong><a href="watch.html">Watch</a><a href="listen.html">Listen</a><a href="read.html">Read</a><a href="create.html">Create with AI</a><a href="server.html">Server</a></div>
+<div><strong>Compare</strong><a href="compare.html">Velora, Plex, Jellyfin</a><a href="requirements.html">System requirements</a><a href="changelog.html">Changelog</a><a href="faq.html">FAQ</a></div>
+<div><strong>Docs</strong><a href="docs/index.html">Setup</a><a href="docs/media-folders.html">Media folders</a><a href="docs/ai-models.html">AI models</a><a href="docs/troubleshooting.html">Troubleshooting</a></div>
+<div><strong>Language</strong><a href="index.html" hreflang="en">English</a><a href="de/index.html" hreflang="de" lang="de">Deutsch</a><a href="ja/index.html" hreflang="ja" lang="ja">日本語</a></div>
+</div>
+<div class="fine"><div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="docs/privacy.html">Privacy</a> · <a href="investors.html">Investors</a> · © 2026 Gökdeniz Gülmez</div>
+<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a></div>
+</div></footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

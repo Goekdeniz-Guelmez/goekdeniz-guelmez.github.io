@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create with AI: music generation, narration and recommendations on Velora</title>
+<meta name="description" content="Music generation with YuE2-3B, narrated audiobooks and EmbeddingGemma 2 recommendations, all on your Mac with MLX.">
+<meta name="theme-color" content="#0E0E10">
+<meta property="og:title" content="Create with AI: music generation, narration and recommendations on Velora">
+<meta property="og:description" content="Music generation with YuE2-3B, narrated audiobooks and EmbeddingGemma 2 recommendations, all on your Mac with MLX.">
+<meta property="og:image" content="assets/screens/web-home.webp">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div><div class="mist" aria-hidden="true"></div>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Velora home"><span class="tile" data-mark data-small></span>Velora</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" class="nav" aria-label="Main"><a href="watch.html">Watch</a><a href="listen.html">Listen</a><a href="read.html">Read</a><a href="create.html" aria-current="page">AI</a><a href="server.html">Server</a><a href="compare.html">Compare</a><a href="docs/index.html">Docs</a><a href="download.html">Download</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap hero sub-hero"><span class="eyebrow">Create with AI</span><h1>AI that runs on your Mac.</h1><p class="lede">Velora's AI features run on the server Mac with MLX, Apple's machine-learning framework for Apple silicon. They wait while you stream, they never touch your media folders, and you decide who can use them.</p></div>
+<section><div class="wrap">
+<div id="music"></div>
+<div class="surface"><div class="txt"><span class="eyebrow">Music generation</span><h3 class="big">Describe a song. Velora sings it.</h3><span class="pill new">New in 2.6</span><p class="sub">Velora generates songs with YuE2-3B, ported natively to MLX. In <strong>Simple</strong> mode you write one line, and the language model on the AI page fills in the title, style, lyrics and length. In <strong>Custom</strong> mode you write the style and lyrics yourself, with [verse], [chorus] and [bridge] sections, or tick Instrumental.</p><ul class="checks"><li>✦ Enhance improves the style; ✦ Write or Enhance drafts or polishes lyrics</li><li>Advanced: Steps, Planning (melody and chords) and Guidance, each explained</li><li>Progress while it works, and a Created by You shelf for your songs</li><li>On Apple TV: describe a song, Instrumental, and a Quality menu</li></ul></div><div class="pics n1"><figure class="shot phone"><span class="badge">Preview</span><img src="assets/screens/preview-music-create.webp" width="860" height="1861" alt="Design of the Create a Song sheet in Custom mode" loading="lazy" decoding="async"><figcaption>Design of the Create a Song sheet in Custom mode (design preview)</figcaption></figure></div></div>
+<div class="card wide-card"><h3>How a song is made</h3><ol class="steps"><li><b>Plan</b> a melody and chords for each section.</li><li><b>Generate</b> the music tokens with YuE2's transformer.</li><li><b>Synthesize</b> the sound with flow matching; more steps sound cleaner but take longer.</li><li><b>Decode</b> to 48 kHz stereo and save it as AAC with a generated cover.</li></ol>
+<p>Only one song is made at a time, the model is loaded only while it runs, and it never runs at the same time as the recommendations model. Admins choose the precision (4, 6 or 8-bit, quantized on your Mac from the original weights), the schedule, the longest song and how many songs each person can make per day. Songs are saved per account in the folder you choose.</p></div>
+<div id="narration"></div>
+<div class="surface"><div class="txt"><span class="eyebrow">Create Audio</span><h3 class="big">Documents become audiobooks.</h3><p class="sub">Turn EPUBs, PDFs, papers, slides, notes and web pages into a chaptered audiobook, a summary, a lecture or a conversation between hosts. The script comes from the language model you pick; the voices are generated on your Mac.</p><ul class="checks"><li>A named cast: Ava, Mira and Lena; Theo, Jonas and Sam. Speakers call each other by name</li><li>Fresh personalities for every audio, overridable per voice</li><li>Optional intro and outro, and a timed transcript in the player</li><li>Saved straight into your Audiobooks, marked “Generated with AI on Velora”</li></ul></div><div class="pics n2"><figure class="shot wide"><img src="assets/screens/web-create.webp" width="1600" height="1000" alt="The Create Audio page in the Velora web app" loading="lazy" decoding="async"><figcaption>The Create Audio page in the Velora web app</figcaption></figure><figure class="shot wide"><img src="assets/screens/server-audiobook.webp" width="1100" height="687" alt="Velora Server for Mac: the Audiobook Creation settings" loading="lazy" decoding="async"><figcaption>Velora Server for Mac: the Audiobook Creation settings</figcaption></figure></div></div>
+<div id="recommendations"></div>
+<div class="surface"><div class="txt"><span class="eyebrow">Recommendations</span><h3 class="big">Your taste, computed at home.</h3><span class="pill new">New in 2.6</span><p class="sub">Velora runs EmbeddingGemma 2 on your Mac, a native Swift port on MLX, to understand titles, descriptions, cover art and, new in 2.6, the sound of your music and audiobooks. Rankings come from each account's own history, so “Because you watched”, “More like this” and “Related to your highlights” are yours alone.</p><ul class="checks"><li>Choose 4, 6 or 8-bit, or full precision, on the AI page</li><li>Audio embeddings for music and audiobooks can be switched off</li><li>Runs at background priority and pauses while a video streams</li></ul></div><div class="pics n1"><figure class="shot phone"><img src="assets/screens/iphone-detail.webp" width="860" height="1869" alt="Velora on iPhone: a movie page with a More like this shelf" loading="lazy" decoding="async"><figcaption>Velora on iPhone: a movie page with a More like this shelf</figcaption></figure></div></div>
+<div class="surface"><div class="txt"><span class="eyebrow">Library cleanup</span><h3 class="big">Tidy titles, suggested, never forced.</h3><p class="sub">An optional background job suggests clean titles, matches for unmatched items, and tags for genre, era, language, mood and topic. Every change is a suggestion with a confidence that you accept, edit or undo on the server's Review page. Nothing is ever renamed on disk.</p></div><div class="pics n1"><figure class="shot wide"><img src="assets/screens/server-ai.webp" width="1100" height="687" alt="Velora Server for Mac: the AI page" loading="lazy" decoding="async"><figcaption>Velora Server for Mac: the AI page</figcaption></figure></div></div>
+<div class="callout"><p><strong>Where the AI runs.</strong> Music generation, narration voices and recommendations run on your Mac. For writing scripts and lyrics you choose a provider on the AI page: a model on your own Mac (Nativ or Ollama), or a cloud provider with your own key. Only a cloud provider receives text, and only the text it needs. See <a href="docs/ai-models.html">AI models</a> and <a href="docs/privacy.html">Privacy</a>.</p></div>
+</div></section>
+
+</main>
+<footer><div class="wrap foot">
+<div class="cols">
+<div><strong>Product</strong><a href="watch.html">Watch</a><a href="listen.html">Listen</a><a href="read.html">Read</a><a href="create.html">Create with AI</a><a href="server.html">Server</a></div>
+<div><strong>Compare</strong><a href="compare.html">Velora, Plex, Jellyfin</a><a href="requirements.html">System requirements</a><a href="changelog.html">Changelog</a><a href="faq.html">FAQ</a></div>
+<div><strong>Docs</strong><a href="docs/index.html">Setup</a><a href="docs/media-folders.html">Media folders</a><a href="docs/ai-models.html">AI models</a><a href="docs/troubleshooting.html">Troubleshooting</a></div>
+<div><strong>Language</strong><a href="index.html" hreflang="en">English</a><a href="de/index.html" hreflang="de" lang="de">Deutsch</a><a href="ja/index.html" hreflang="ja" lang="ja">日本語</a></div>
+</div>
+<div class="fine"><div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="docs/privacy.html">Privacy</a> · <a href="investors.html">Investors</a> · © 2026 Gökdeniz Gülmez</div>
+<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a></div>
+</div></footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

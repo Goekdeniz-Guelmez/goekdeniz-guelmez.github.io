@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velora vs Plex vs Jellyfin</title>
+<meta name="description" content="A factual comparison of Velora, Plex and Jellyfin: platforms, apps, accounts, transcoding, reading, audiobooks and AI.">
+<meta name="theme-color" content="#0E0E10">
+<meta property="og:title" content="Velora vs Plex vs Jellyfin">
+<meta property="og:description" content="A factual comparison of Velora, Plex and Jellyfin: platforms, apps, accounts, transcoding, reading, audiobooks and AI.">
+<meta property="og:image" content="assets/screens/web-home.webp">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div><div class="mist" aria-hidden="true"></div>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Velora home"><span class="tile" data-mark data-small></span>Velora</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" class="nav" aria-label="Main"><a href="watch.html">Watch</a><a href="listen.html">Listen</a><a href="read.html">Read</a><a href="create.html">AI</a><a href="server.html">Server</a><a href="compare.html" aria-current="page">Compare</a><a href="docs/index.html">Docs</a><a href="download.html">Download</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap hero sub-hero"><span class="eyebrow">Compare</span><h1>Velora, Plex and Jellyfin.</h1><p class="lede">Plex and Jellyfin are excellent media servers that run almost anywhere. Velora makes a different trade: it runs only on the Mac and only for Apple devices, so it can use what Apple builds into every one of them. Here is an honest side-by-side.</p></div>
+<section><div class="wrap prose wide">
+<table class="cmp">
+<thead><tr><th scope="col"></th><th scope="col">Velora</th><th scope="col">Plex</th><th scope="col">Jellyfin</th></tr></thead>
+<tbody>
+<tr><th scope="row">Server runs on</th><td>Mac with Apple silicon</td><td>Windows, macOS, Linux, many NAS</td><td>Windows, macOS, Linux, Docker, many NAS</td></tr>
+<tr><th scope="row">Server is a native macOS app</th><td><span class="pill ok">Yes</span></td><td><span class="pill">No</span> cross-platform</td><td><span class="pill">No</span> cross-platform (.NET)</td></tr>
+<tr><th scope="row">Source code</th><td>Closed</td><td>Closed</td><td>Open source (GPL)</td></tr>
+<tr><th scope="row">Account with a company required</th><td><span class="pill">No</span></td><td><span class="pill ok">Yes</span> Plex account</td><td><span class="pill">No</span></td></tr>
+<tr><th scope="row">Price</th><td>Free during the beta</td><td>Free tier; some features need Plex Pass</td><td>Free</td></tr>
+<tr><th scope="row">Hardware transcoding</th><td><span class="pill ok">Yes</span> VideoToolbox</td><td><span class="pill ok">Yes</span> with Plex Pass</td><td><span class="pill ok">Yes</span></td></tr>
+<tr><th scope="row">Apps for iPhone, iPad, Mac, Apple TV, Vision Pro</th><td><span class="pill ok">Yes</span> SwiftUI, one design</td><td><span class="pill soon">Partly</span> official apps, cross-platform design</td><td><span class="pill soon">Partly</span> Swiftfin and third-party apps</td></tr>
+<tr><th scope="row">Android, smart TVs, consoles</th><td><span class="pill">No</span> web app only</td><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Yes</span></td></tr>
+<tr><th scope="row">Skip intros and credits</th><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Yes</span> with Plex Pass</td><td><span class="pill soon">Partly</span> with plugins</td></tr>
+<tr><th scope="row">Dedicated audiobook player</th><td><span class="pill ok">Yes</span></td><td><span class="pill soon">Partly</span> through music libraries and apps</td><td><span class="pill soon">Partly</span> through clients</td></tr>
+<tr><th scope="row">Books and PDFs with highlights and notes</th><td><span class="pill ok">Yes</span> paged reader, Apple Pencil</td><td><span class="pill">No</span></td><td><span class="pill soon">Partly</span> books and comics, no notes</td></tr>
+<tr><th scope="row">Manga reader</th><td><span class="pill ok">Yes</span></td><td><span class="pill">No</span></td><td><span class="pill soon">Partly</span> comics in the web client</td></tr>
+<tr><th scope="row">On-device AI (recommendations, narration, music)</th><td><span class="pill ok">Yes</span> MLX on your Mac</td><td><span class="pill">No</span></td><td><span class="pill">No</span></td></tr>
+<tr><th scope="row">Built-in MCP server for AI assistants</th><td><span class="pill ok">Yes</span></td><td><span class="pill">No</span></td><td><span class="pill">No</span></td></tr>
+<tr><th scope="row">Free streaming channels</th><td><span class="pill">No</span></td><td><span class="pill ok">Yes</span></td><td><span class="pill">No</span></td></tr>
+<tr><th scope="row">Plugin ecosystem, years of maturity</th><td><span class="pill">No</span> new in 2026</td><td><span class="pill ok">Yes</span></td><td><span class="pill ok">Yes</span></td></tr>
+<tr><th scope="row">Works with the others</th><td>Apps sign in to Jellyfin servers; server reads Jellyfin libraries</td><td>—</td><td>—</td></tr>
+</tbody></table>
+<p class="note">Based on publicly available information as of November 2026. Other products change their features and plans; check their websites for the current state. Plex and Jellyfin are trademarks of their respective owners. Velora is not affiliated with either.</p>
+<h2>Which should you choose?</h2>
+<ul>
+<li><strong>Choose Velora</strong> if your home runs on Apple devices, you have an Apple silicon Mac, and you want one library for video, music, audiobooks, books, manga and papers, with AI that stays on your Mac.</li>
+<li><strong>Choose Plex</strong> if you need apps on almost every device ever made, or want its free streaming channels.</li>
+<li><strong>Choose Jellyfin</strong> if you want a free, open-source server on Linux or a NAS, or a big plugin ecosystem.</li>
+<li><strong>Use both</strong>: Velora's apps can sign in to a Jellyfin server, and Velora Server can read the same folders. See <a href="docs/jellyfin.html">Jellyfin</a>.</li>
+</ul>
+<h2>Why only Apple?</h2>
+<p>So every app can be truly native: Apple's player, Liquid Glass, Live Activities, Top Shelf, SharePlay and the share sheet. The server uses VideoToolbox, the hardware media engine in every Apple silicon Mac, and runs its AI with MLX. A Mac mini on a shelf is quiet and uses little power when idle, so you don't need a separate NAS or a PC running all day.</p>
+</div></section>
+
+</main>
+<footer><div class="wrap foot">
+<div class="cols">
+<div><strong>Product</strong><a href="watch.html">Watch</a><a href="listen.html">Listen</a><a href="read.html">Read</a><a href="create.html">Create with AI</a><a href="server.html">Server</a></div>
+<div><strong>Compare</strong><a href="compare.html">Velora, Plex, Jellyfin</a><a href="requirements.html">System requirements</a><a href="changelog.html">Changelog</a><a href="faq.html">FAQ</a></div>
+<div><strong>Docs</strong><a href="docs/index.html">Setup</a><a href="docs/media-folders.html">Media folders</a><a href="docs/ai-models.html">AI models</a><a href="docs/troubleshooting.html">Troubleshooting</a></div>
+<div><strong>Language</strong><a href="index.html" hreflang="en">English</a><a href="de/index.html" hreflang="de" lang="de">Deutsch</a><a href="ja/index.html" hreflang="ja" lang="ja">日本語</a></div>
+</div>
+<div class="fine"><div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="docs/privacy.html">Privacy</a> · <a href="investors.html">Investors</a> · © 2026 Gökdeniz Gülmez</div>
+<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a></div>
+</div></footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

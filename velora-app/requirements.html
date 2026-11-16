@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>System requirements: Velora</title>
+<meta name="description" content="Velora Server needs an Apple silicon Mac with macOS 26 or later. Apps for iOS 18, macOS 15, tvOS 26 and visionOS 2.">
+<meta name="theme-color" content="#0E0E10">
+<meta property="og:title" content="System requirements: Velora">
+<meta property="og:description" content="Velora Server needs an Apple silicon Mac with macOS 26 or later. Apps for iOS 18, macOS 15, tvOS 26 and visionOS 2.">
+<meta property="og:image" content="assets/screens/web-home.webp">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div><div class="mist" aria-hidden="true"></div>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html" aria-label="Velora home"><span class="tile" data-mark data-small></span>Velora</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" class="nav" aria-label="Main"><a href="watch.html">Watch</a><a href="listen.html">Listen</a><a href="read.html">Read</a><a href="create.html">AI</a><a href="server.html">Server</a><a href="compare.html">Compare</a><a href="docs/index.html">Docs</a><a href="download.html">Download</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap hero sub-hero"><span class="eyebrow">System requirements</span><h1>What you need.</h1><p class="lede">One Apple silicon Mac for the server, and the Apple devices you already have.</p></div>
+<section><div class="wrap prose wide">
+<h2>Server</h2>
+<table><thead><tr><th scope="col">Item</th><th scope="col">Requirement</th></tr></thead><tbody>
+<tr><td>Mac</td><td>Apple silicon (M1 or later). Intel Macs are not supported.</td></tr>
+<tr><td>macOS</td><td>macOS 26 or later</td></tr>
+<tr><td>Storage</td><td>Your media on that Mac or on drives connected to it. Velora's data folder holds artwork, previews and caches; the Storage page shows how much.</td></tr>
+<tr><td>Network</td><td>Your devices on the same network. Remote access works through an address you add yourself.</td></tr>
+<tr><td>Optional: ffmpeg</td><td>For converting formats a device can't play directly.</td></tr>
+<tr><td>Optional: TMDB key</td><td>A free key gives the best movie posters. Shows, music, books and manga work without one.</td></tr>
+</tbody></table>
+<h2>AI features</h2>
+<p>All AI features are optional and off until you set them up. Models are downloaded once into Velora's data folder.</p>
+<table><thead><tr><th scope="col">Feature</th><th scope="col">Model</th><th scope="col">Notes</th></tr></thead><tbody>
+<tr><td>Recommendations</td><td>EmbeddingGemma 2 (4, 6, 8-bit or full precision)</td><td>Loaded only while it refreshes. Apple's on-device model is used until the download finishes.</td></tr>
+<tr><td>Music generation</td><td>YuE2-3B (4, 6 or 8-bit)</td><td>The heaviest feature. We recommend a Mac with 16 GB of memory or more.</td></tr>
+<tr><td>Create Audio voices</td><td>Phonon TTS on MLX</td><td>Phonon 40M is CC BY-NC: audio made with it is for non-commercial use.</td></tr>
+<tr><td>Scripts and lyrics</td><td>A language model you choose</td><td>Nativ or Ollama on your Mac, or a cloud provider with your own key.</td></tr>
+</tbody></table>
+<h2>Apps</h2>
+<table><thead><tr><th scope="col">Device</th><th scope="col">Requirement</th><th scope="col">Status</th></tr></thead><tbody>
+<tr><td>iPhone, iPad</td><td>iOS / iPadOS 18 or later</td><td>TestFlight</td></tr>
+<tr><td>Mac (watching app)</td><td>macOS 15 or later</td><td>TestFlight</td></tr>
+<tr><td>Apple TV</td><td>tvOS 26 or later</td><td>TestFlight</td></tr>
+<tr><td>Apple Vision Pro</td><td>visionOS 2 or later</td><td>TestFlight</td></tr>
+<tr><td>CarPlay</td><td>With the iPhone app</td><td>Waiting for Apple's approval</td></tr>
+<tr><td>Web app</td><td>A current browser on your network</td><td>Available</td></tr>
+</tbody></table>
+</div></section>
+
+</main>
+<footer><div class="wrap foot">
+<div class="cols">
+<div><strong>Product</strong><a href="watch.html">Watch</a><a href="listen.html">Listen</a><a href="read.html">Read</a><a href="create.html">Create with AI</a><a href="server.html">Server</a></div>
+<div><strong>Compare</strong><a href="compare.html">Velora, Plex, Jellyfin</a><a href="requirements.html">System requirements</a><a href="changelog.html">Changelog</a><a href="faq.html">FAQ</a></div>
+<div><strong>Docs</strong><a href="docs/index.html">Setup</a><a href="docs/media-folders.html">Media folders</a><a href="docs/ai-models.html">AI models</a><a href="docs/troubleshooting.html">Troubleshooting</a></div>
+<div><strong>Language</strong><a href="index.html" hreflang="en">English</a><a href="de/index.html" hreflang="de" lang="de">Deutsch</a><a href="ja/index.html" hreflang="ja" lang="ja">日本語</a></div>
+</div>
+<div class="fine"><div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="docs/privacy.html">Privacy</a> · <a href="investors.html">Investors</a> · © 2026 Gökdeniz Gülmez</div>
+<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a></div>
+</div></footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

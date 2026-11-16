@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Troubleshooting: Velora docs</title>
+<meta name="description" content="Velora documentation: Troubleshooting.">
+<meta name="theme-color" content="#0E0E10">
+<meta property="og:title" content="Troubleshooting: Velora docs">
+<meta property="og:description" content="Velora documentation: Troubleshooting.">
+<meta property="og:image" content="../assets/screens/web-home.webp">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div><div class="mist" aria-hidden="true"></div>
+<header class="top"><div class="wrap">
+<a class="brand" href="../index.html" aria-label="Velora home"><span class="tile" data-mark data-small></span>Velora</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" class="nav" aria-label="Main"><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">AI</a><a href="../server.html">Server</a><a href="../compare.html">Compare</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../download.html">Download</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap docs"><nav class="side" aria-label="Documentation"><a href="index.html">Setup</a><a href="media-folders.html">Adding media folders</a><a href="users.html">Users and devices</a><a href="ai-models.html">AI models</a><a href="music-generation.html">Music generation</a><a href="create-audio.html">Create Audio</a><a href="jellyfin.html">Jellyfin</a><a href="platforms.html">Features by platform</a><a href="mcp.html">MCP setup</a><a href="multi-server.html">Multi-server</a><a href="privacy.html">Privacy</a><a href="troubleshooting.html" aria-current="page">Troubleshooting</a></nav><article class="prose">
+<h1>Troubleshooting</h1>
+<details><summary>My Mac doesn't show up in the app</summary><p>Check that the device and the Mac are on the same network and that Velora Server is running (the sidebar says <em>Running</em>). Some routers block discovery between Wi-Fi and Ethernet; enter the address by hand: <code>http://&lt;your-mac&gt;.local:8420</code>. Allow Velora when iOS asks for Local Network access.</p></details>
+<details><summary>A video won't start or keeps loading</summary><p>Tap <strong>Retry</strong>. If the file needs converting, make sure <code>ffmpeg</code> is installed. The server's <strong>Playback</strong> page has <strong>Show Logs</strong> with the request log. Image subtitles (PGS, VobSub) are burned in and start more slowly; pick a text subtitle if there is one.</p></details>
+<details><summary>Posters or covers are missing</summary><p>Movie posters need a free TMDB key under <strong>Integrations</strong>. Check that the providers you want are switched on, then use <strong>Rescan</strong>. Local <code>poster.jpg</code> and <code>cover.jpg</code> files always win.</p></details>
+<details><summary>Episodes are in the wrong order or have no titles</summary><p>Name files <code>Show - S01E01 - Title.mkv</code> inside <code>Season 01</code> folders, or add <code>.nfo</code> files. Then rescan the library.</p></details>
+<details><summary>Lyrics don't appear</summary><p>Put an <code>.lrc</code> file with the same name next to the song, or embed lyrics in the file. Velora reads lyrics from local files only.</p></details>
+<details><summary>Recommendations are empty</summary><p>Recommendations need some history: watch, listen or read a few things. The model downloads on first use (see <strong>Activity</strong>). On a Jellyfin server, Velora's recommendations are not available.</p></details>
+<details><summary>Music generation is slow or won't start</summary><p>Only one song is made at a time, and jobs pause while a video streams. Check the schedule on the Music Generation page and the daily limit for your account. A lower precision (4-bit) uses less memory.</p></details>
+<details><summary>Create Audio fails at the script step</summary><p>Check the language model connection on the AI page. For Ollama, make sure it is running on the Mac. The job shows a readable error on the Activity page and can be retried.</p></details>
+<details><summary>I can't sign in to a Jellyfin server</summary><p>Use the address with port 8096 (or your custom port) and your Jellyfin username. The app checks <code>/System/Info/Public</code> to reach the server.</p></details>
+<details><summary>I forgot the admin password</summary><p>Reset it on the Mac itself from Velora Server's sign-in screen. It can't be reset over the network.</p></details>
+<details><summary>After updating, my library looks out of date</summary><p>Open Velora Server and click <strong>Rescan All</strong>.</p></details>
+</article></div>
+</main>
+<footer><div class="wrap foot">
+<div class="cols">
+<div><strong>Product</strong><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">Create with AI</a><a href="../server.html">Server</a></div>
+<div><strong>Compare</strong><a href="../compare.html">Velora, Plex, Jellyfin</a><a href="../requirements.html">System requirements</a><a href="../changelog.html">Changelog</a><a href="../faq.html">FAQ</a></div>
+<div><strong>Docs</strong><a href="../docs/index.html">Setup</a><a href="../docs/media-folders.html">Media folders</a><a href="../docs/ai-models.html">AI models</a><a href="../docs/troubleshooting.html">Troubleshooting</a></div>
+<div><strong>Language</strong><a href="../index.html" hreflang="en">English</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a></div>
+</div>
+<div class="fine"><div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="../docs/privacy.html">Privacy</a> · <a href="../investors.html">Investors</a> · © 2026 Gökdeniz Gülmez</div>
+<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a></div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
