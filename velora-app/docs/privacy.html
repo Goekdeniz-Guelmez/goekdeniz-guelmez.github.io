@@ -21,7 +21,7 @@
 <nav id="nav" class="nav" aria-label="Main"><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">AI</a><a href="../server.html">Server</a><a href="../compare.html">Compare</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../download.html">Download</a></nav>
 </div></header>
 <main id="main">
-<div class="wrap docs"><nav class="side" aria-label="Documentation"><a href="index.html">Setup</a><a href="media-folders.html">Adding media folders</a><a href="users.html">Users and devices</a><a href="ai-models.html">AI models</a><a href="music-generation.html">Music generation</a><a href="create-audio.html">Create Audio</a><a href="jellyfin.html">Jellyfin</a><a href="platforms.html">Features by platform</a><a href="mcp.html">MCP setup</a><a href="multi-server.html">Multi-server</a><a href="privacy.html" aria-current="page">Privacy</a><a href="troubleshooting.html">Troubleshooting</a></nav><article class="prose">
+<div class="wrap docs"><nav class="side" aria-label="Documentation"><a href="index.html">Setup</a><a href="media-folders.html">Adding media folders</a><a href="users.html">Users and devices</a><a href="ai-models.html">AI models</a><a href="music-generation.html">Music generation</a><a href="create-audio.html">Create Audio</a><a href="jellyfin.html">Jellyfin</a><a href="plex.html">Plex</a><a href="navidrome.html">Navidrome</a><a href="platforms.html">Features by platform</a><a href="mcp.html">MCP setup</a><a href="multi-server.html">Multi-server</a><a href="privacy.html" aria-current="page">Privacy</a><a href="troubleshooting.html">Troubleshooting</a></nav><article class="prose">
 <h1>Privacy</h1>
 <p>Velora is self-hosted. Your media, your accounts, your history and your highlights live on your Mac. There's no Velora cloud and no telemetry.</p>
 <h2>What can leave your network, and when</h2>
@@ -32,6 +32,8 @@
 <tr><td>Scripts, Simple-mode songs, lyric help, cleanup</td><td>The language model provider your admin chose</td><td>The text needed for the task</td><td>Only with a cloud provider. Nativ and Ollama stay on your Mac.</td></tr>
 <tr><td>Model downloads</td><td>Hugging Face</td><td>Download request</td><td>When EmbeddingGemma 2, YuE2-3B or Phonon voices are downloaded</td></tr>
 <tr><td>Jellyfin</td><td>The Jellyfin server you add</td><td>Your Jellyfin sign-in and playback reports</td><td>Only if you add one</td></tr>
+<tr><td>Plex</td><td>plex.tv and the Plex server you add</td><td>The plex.tv sign-in (a code you approve; never your password), what's playing and resume points</td><td>Only if you add one</td></tr>
+<tr><td>Navidrome</td><td>The Navidrome or Subsonic server you add</td><td>A salted sign-in token, what's playing and plays</td><td>Only if you add one</td></tr>
 <tr><td>MCP</td><td>The assistant you connect</td><td>Results of the tools it calls</td><td>Only if you turn MCP on</td></tr>
 </tbody></table>
 <p>Recommendations, narration voices and music generation run on your Mac. Metadata providers <strong>never</strong> receive file paths, file names, sizes or hashes. Lyrics are read from local files only. Velora never modifies your media.</p>
