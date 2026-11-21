@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artwork and subtitles: Velora docs</title>
+<meta name="description" content="Velora documentation: Artwork and subtitles.">
+<meta name="theme-color" content="#0E0E10">
+<meta property="og:title" content="Artwork and subtitles: Velora docs">
+<meta property="og:description" content="Velora documentation: Artwork and subtitles.">
+<meta property="og:image" content="../assets/screens/web-home.webp">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div><div class="mist" aria-hidden="true"></div>
+<header class="top"><div class="wrap">
+<a class="brand" href="../index.html" aria-label="Velora home"><span class="tile" data-mark data-small></span>Velora</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" class="nav" aria-label="Main"><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">AI</a><a href="../server.html">Server</a><a href="../compare.html">Compare</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../download.html">Download</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap docs"><nav class="side" aria-label="Documentation"><span class="side-h">Get started</span><a href="index.html">Setup</a><a href="users.html">Users and devices</a><span class="side-h">Organize your media</span><a href="media-folders.html">Overview and rules</a><a href="movies.html">Movies</a><a href="shows.html">Shows</a><a href="music.html">Music and audiobooks</a><a href="reading.html">Books, manga and scores</a><a href="extra-files.html" aria-current="page">Artwork and subtitles</a><span class="side-h">AI</span><a href="ai-models.html">AI models</a><a href="music-generation.html">Music generation</a><a href="create-audio.html">Create Audio</a><span class="side-h">Other servers</span><a href="jellyfin.html">Jellyfin</a><a href="plex.html">Plex</a><a href="navidrome.html">Navidrome</a><a href="multi-server.html">Multi-server</a><span class="side-h">Reference</span><a href="platforms.html">Features by platform</a><a href="mcp.html">MCP setup</a><a href="privacy.html">Privacy</a><a href="troubleshooting.html">Troubleshooting</a></nav><article class="prose">
+<h1>Artwork, subtitles and other files</h1>
+<p class="lede-s">Every file Velora reads next to your media, in one place. Velora only reads these files; it never changes or deletes them.</p>
+<h2 id="artwork">Artwork</h2>
+<p>JPG, JPEG, PNG, WebP and HEIC, upper or lower case. <code>&lt;file&gt;</code> means the media file's name without its extension. The first match in each row wins, and local pictures always win over online ones.</p>
+<table><thead><tr><th scope="col">Picture</th><th scope="col">Names</th><th scope="col">Used for</th></tr></thead><tbody>
+<tr><td>Poster</td><td><code>&lt;file&gt;-poster</code>, <code>poster</code>, <code>movie</code>, <code>folder</code>, <code>cover</code>, <code>show</code></td><td>Movies, shows, seasons</td></tr>
+<tr><td>Backdrop</td><td><code>&lt;file&gt;-fanart</code>, <code>&lt;file&gt;-backdrop</code>, <code>fanart</code>, <code>backdrop</code>, <code>background</code>, <code>art</code>, <code>landscape</code></td><td>Page headers, Apple TV</td></tr>
+<tr><td>Title logo</td><td><code>&lt;file&gt;-logo</code>, <code>&lt;file&gt;-clearlogo</code>, <code>logo</code>, <code>clearlogo</code></td><td>Shown over the backdrop instead of the title text</td></tr>
+<tr><td>Season poster</td><td><code>season01-poster</code>, <code>season1-poster</code>, <code>season-specials-poster</code>; or <code>poster</code> in the season folder</td><td>Shows</td></tr>
+<tr><td>Episode still</td><td><code>&lt;file&gt;-thumb</code>, <code>&lt;file&gt;</code>, <code>&lt;file&gt;-landscape</code></td><td>Episode rows</td></tr>
+<tr><td>Cover</td><td><code>&lt;file&gt;-cover</code>, <code>cover</code>, <code>folder</code>, <code>front</code>, <code>album</code>, <code>albumart</code></td><td>Albums, audiobooks, books, manga, scores</td></tr>
+</tbody></table>
+<p><strong>Save artwork next to media</strong> (Metadata &amp; Artwork in Velora Server, off by default) is the one exception to “read only”: it copies the pictures Velora found online into your folders under these names, so Jellyfin, Kodi, Plex and Finder see them too. It never replaces a picture that's already there, and it marks its copies so Velora can still update them later.</p>
+<h2 id="subtitles">Subtitles</h2>
+<p>SRT, ASS, SSA and WebVTT files named like the video, with optional parts between dots:</p>
+<pre class="tree"><code>Ember Coast (2019).mkv
+Ember Coast (2019).srt                    <span class="n">← no language given</span>
+Ember Coast (2019).en.srt                 <span class="n">← English</span>
+Ember Coast (2019).de.forced.srt          <span class="n">← German, forced (signs and foreign dialogue)</span>
+Ember Coast (2019).English.sdh.srt        <span class="n">← English, for the deaf and hard of hearing</span>
+Ember Coast (2019).ja.Commentary.ass      <span class="n">← Japanese, titled “Commentary”</span></code></pre>
+<table><thead><tr><th scope="col">Part</th><th scope="col">Means</th></tr></thead><tbody>
+<tr><td><code>en</code>, <code>eng</code>, <code>English</code>, <code>de</code>, <code>ja</code>, …</td><td>The language (two or three-letter code, or the English name)</td></tr>
+<tr><td><code>forced</code>, <code>foreign</code></td><td>Forced: only signs and foreign-language lines</td></tr>
+<tr><td><code>sdh</code>, <code>cc</code>, <code>hi</code></td><td>SDH: with sound descriptions</td></tr>
+<tr><td>Any other word</td><td>Becomes the track's name, for example <code>Commentary</code> or <code>Signs</code></td></tr>
+</tbody></table>
+<p>The name must start with the video's full name followed by a dot: <code>Ember Coast (2019) 2.srt</code> belongs to a different file. Subtitle tracks inside an MKV are listed with their names as well.</p>
+<h2 id="other">Other files Velora reads</h2>
+<table><thead><tr><th scope="col">File</th><th scope="col">Next to</th><th scope="col">What it does</th></tr></thead><tbody>
+<tr><td><code>&lt;file&gt;.nfo</code>, <code>movie.nfo</code></td><td>A movie</td><td>Title, plot, IDs (Kodi and Jellyfin format)</td></tr>
+<tr><td><code>tvshow.nfo</code>, <code>&lt;file&gt;.nfo</code></td><td>A show, an episode</td><td>Show and episode details</td></tr>
+<tr><td><code>&lt;file&gt;.edl</code></td><td>An episode</td><td>Intro and credits times (Intro Skipper's format)</td></tr>
+<tr><td><code>&lt;song&gt;.lrc</code>, <code>&lt;song&gt;.txt</code></td><td>A song</td><td>Synced or plain lyrics</td></tr>
+<tr><td><code>&lt;audiobook&gt;.vtt</code></td><td>An audiobook</td><td>A timed transcript to read along with</td></tr>
+<tr><td><code>backdrops/Backdrop.mkv</code></td><td>A movie or show folder</td><td>The moving backdrop</td></tr>
+<tr><td><code>Extras/</code></td><td>A movie or show folder</td><td>Extras on the title's page</td></tr>
+</tbody></table>
+<div class="nextpages"><a href="movies.html"><strong>Movies</strong><span>Versions, extras, moving backdrops and disc rips</span></a><a href="shows.html"><strong>Shows</strong><span>Seasons, specials, episode numbers and intros</span></a><a href="music.html"><strong>Music and audiobooks</strong><span>Albums, discs, covers, lyrics and chapters</span></a><a href="reading.html"><strong>Books, manga and scores</strong><span>Books, papers, manga and sheet music</span></a><a href="extra-files.html"><strong>Artwork and subtitles</strong><span>Every file Velora reads next to your media</span></a></div></article></div>
+</main>
+<footer><div class="wrap foot">
+<div class="cols">
+<div><strong>Product</strong><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">Create with AI</a><a href="../server.html">Server</a></div>
+<div><strong>Compare</strong><a href="../compare.html">Velora, Plex, Jellyfin</a><a href="../requirements.html">System requirements</a><a href="../changelog.html">Changelog</a><a href="../faq.html">FAQ</a></div>
+<div><strong>Docs</strong><a href="../docs/index.html">Setup</a><a href="../docs/media-folders.html">Organizing your media</a><a href="../docs/movies.html">Naming movies</a><a href="../docs/shows.html">Naming shows</a><a href="../docs/ai-models.html">AI models</a><a href="../docs/troubleshooting.html">Troubleshooting</a></div>
+<div><strong>Language</strong><a href="../index.html" hreflang="en">English</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a></div>
+</div>
+<div class="fine"><div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="../docs/privacy.html">Privacy</a> · <a href="../investors.html">Investors</a> · © 2026 Gökdeniz Gülmez</div>
+<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a></div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

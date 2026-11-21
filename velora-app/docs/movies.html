@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Movies: Velora docs</title>
+<meta name="description" content="Velora documentation: Movies.">
+<meta name="theme-color" content="#0E0E10">
+<meta property="og:title" content="Movies: Velora docs">
+<meta property="og:description" content="Velora documentation: Movies.">
+<meta property="og:image" content="../assets/screens/web-home.webp">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div><div class="mist" aria-hidden="true"></div>
+<header class="top"><div class="wrap">
+<a class="brand" href="../index.html" aria-label="Velora home"><span class="tile" data-mark data-small></span>Velora</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" class="nav" aria-label="Main"><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">AI</a><a href="../server.html">Server</a><a href="../compare.html">Compare</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../download.html">Download</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap docs"><nav class="side" aria-label="Documentation"><span class="side-h">Get started</span><a href="index.html">Setup</a><a href="users.html">Users and devices</a><span class="side-h">Organize your media</span><a href="media-folders.html">Overview and rules</a><a href="movies.html" aria-current="page">Movies</a><a href="shows.html">Shows</a><a href="music.html">Music and audiobooks</a><a href="reading.html">Books, manga and scores</a><a href="extra-files.html">Artwork and subtitles</a><span class="side-h">AI</span><a href="ai-models.html">AI models</a><a href="music-generation.html">Music generation</a><a href="create-audio.html">Create Audio</a><span class="side-h">Other servers</span><a href="jellyfin.html">Jellyfin</a><a href="plex.html">Plex</a><a href="navidrome.html">Navidrome</a><a href="multi-server.html">Multi-server</a><span class="side-h">Reference</span><a href="platforms.html">Features by platform</a><a href="mcp.html">MCP setup</a><a href="privacy.html">Privacy</a><a href="troubleshooting.html">Troubleshooting</a></nav><article class="prose">
+<h1>Movies</h1>
+<p class="lede-s">Give every movie its own folder named <code>Title (Year)</code>, with the film inside under the same name. Everything else in this guide is optional, and makes a good library great.</p>
+<h2 id="basic">The basic layout</h2>
+<pre class="tree"><code>Movies/
+├── Ember Coast (2019)/
+│   └── Ember Coast (2019).mkv
+└── The Quiet Orchard (1988)/
+    └── The Quiet Orchard (1988).mp4</code></pre>
+<ul>
+<li>Use the title as TMDB knows it, in English or in the original language. Velora looks up the title and the year, never the file path.</li>
+<li>The year can be written <code>(2019)</code>, <code>[2019]</code> or <code>.2019.</code>. If the file name has none, Velora takes it from the folder.</li>
+<li>Release names such as <code>Ember.Coast.2019.1080p.BluRay.mkv</code> work, but a clean name matches more reliably.</li>
+<li>Several movies loose in one folder are fine for a quick start, but versions, extras and artwork need one folder per movie.</li>
+</ul>
+<h2 id="complete">A complete movie folder</h2>
+<pre class="tree"><code>Ember Coast (2019)/
+├── Ember Coast (2019).mkv                      <span class="n">← the film</span>
+├── Ember Coast (2019) - Director&#x27;s Cut.mkv     <span class="n">← a second version</span>
+├── Ember Coast (2019).en.srt                   <span class="n">← subtitles</span>
+├── Ember Coast (2019).de.forced.srt
+├── poster.jpg                                  <span class="n">← artwork</span>
+├── fanart.jpg
+├── logo.png
+├── movie.nfo                                   <span class="n">← optional details</span>
+├── backdrops/
+│   └── Backdrop.mkv                            <span class="n">← moving backdrop</span>
+└── Extras/
+    ├── Making Of.mkv
+    ├── Storyboard Version.mkv
+    └── Teaser Trailer.mkv</code></pre>
+<h2 id="versions">Versions and editions</h2>
+<p>Several files of the same film in one folder become <strong>one movie with a version picker</strong>. Name each extra version after the folder, then <code>-</code> and a label; the label is what the picker shows.</p>
+<pre class="tree"><code>Ember Coast (2019)/
+├── Ember Coast (2019).mkv                      <span class="n">← main version (no label)</span>
+├── Ember Coast (2019) - Director&#x27;s Cut.mkv     <span class="n">← “Director&#x27;s Cut”</span>
+├── Ember Coast (2019) - 4K.mkv                 <span class="n">← “4K”</span>
+└── Ember Coast (2019) {edition-Extended}.mkv   <span class="n">← Plex style, “Extended”</span></code></pre>
+<ul>
+<li>The file without a label is the main version and is the one listed in the library. Without an unlabelled file, Velora prefers the one named exactly like the folder, then the largest.</li>
+<li>Two films of 40 minutes or more without labels become “Version 2” and so on. A copy whose audio is a commentary track is listed as “Commentary”.</li>
+<li>Plex's <code>{edition-…}</code> labels work as they are.</li>
+</ul>
+<h2 id="parts">Movies split into parts</h2>
+<p>A film split across files is kept in order as parts, not versions: end each name with <code>part1</code>, <code>cd1</code>, <code>disc 1</code> or <code>pt1</code>.</p>
+<pre class="tree"><code>The Long Voyage (1962)/
+├── The Long Voyage (1962) - part1.mkv
+└── The Long Voyage (1962) - part2.mkv</code></pre>
+<h2 id="extras">Extras</h2>
+<p>Making-ofs, trailers, deleted scenes and interviews go into an <code>Extras</code> folder inside the movie's folder. They appear on the movie's page under Extras, not in your library. The file name becomes the extra's title, so name them the way you want to read them.</p>
+<p>These folder names all work: <code>Extras</code>, <code>Featurettes</code>, <code>Behind The Scenes</code>, <code>Deleted Scenes</code>, <code>Interviews</code>, <code>Scenes</code>, <code>Shorts</code>, <code>Trailers</code>, <code>Clips</code>, <code>Bonus</code>, <code>Other</code>, <code>Samples</code>.</p>
+<p>Or leave the extra next to the film and end its name with a Plex-style suffix; the suffix is dropped from the title:</p>
+<pre class="tree"><code>Ember Coast (2019)/
+├── Ember Coast (2019).mkv
+├── Making Of-featurette.mkv       <span class="n">← extra “Making Of”</span>
+└── Teaser-trailer.mkv             <span class="n">← extra “Teaser”</span></code></pre>
+<p>Suffixes: <code>-trailer</code>, <code>-featurette</code>, <code>-behindthescenes</code>, <code>-deleted</code>, <code>-deletedscene</code>, <code>-interview</code>, <code>-scene</code>, <code>-short</code>, <code>-clip</code>, <code>-extra</code>, <code>-other</code>, <code>-sample</code>.</p>
+<div class="callout"><p>Extras attach to a movie only when its folder holds <strong>one</strong> movie. In a shared folder they appear as separate videos.</p></div>
+<h2 id="backdrops">Moving backdrops</h2>
+<p>A short looping video, such as a Blu-ray's menu loop, can play behind the movie's page in place of the still backdrop (with sound on Apple TV). Put it in a <code>backdrops</code> folder and name it <code>Backdrop</code>:</p>
+<pre class="tree"><code>Ember Coast (2019)/
+├── Ember Coast (2019).mkv
+└── backdrops/
+    └── Backdrop.mkv</code></pre>
+<ul>
+<li>Backdrops are hidden from the library and from Extras.</li>
+<li>A file named <code>Backdrop</code> or <code>Menu</code> (<code>Ember Coast (2019) - Backdrop.mkv</code>), or anything in a <code>backdrops</code> or <code>menu</code> folder, counts as a backdrop. With several, the one named Backdrop plays.</li>
+<li>Keep it short: 20 seconds to a few minutes, made to loop.</li>
+</ul>
+<h2 id="disc-rips">Disc rips (MakeMKV)</h2>
+<p>MakeMKV names its files <code>title_t00.mkv</code>, <code>title_t01.mkv</code> and so on. Velora copes with a folder of unnamed rips: beside a feature-length film, titles under 10 minutes whose audio has no language are treated as menu loops and hidden, and the other short titles become “Extra 1”, “Extra 2” on the film's page.</p>
+<p>For the best result, rename them before you add them:</p>
+<table><thead><tr><th scope="col">Rip title</th><th scope="col">Rename to</th></tr></thead><tbody>
+<tr><td>The feature (the longest title)</td><td><code>Ember Coast (2019)/Ember Coast (2019).mkv</code></td></tr>
+<tr><td>The menu loop (short, still or looping picture, no spoken language)</td><td><code>backdrops/Backdrop.mkv</code></td></tr>
+<tr><td>Making-ofs, storyboards, trailers for this film</td><td><code>Extras/&lt;what it is&gt;.mkv</code></td></tr>
+<tr><td>Trailers for other films, ads, test patterns</td><td>Leave them out</td></tr>
+</tbody></table>
+<h2 id="artwork">Artwork</h2>
+<p>Pictures in the movie's folder always win over pictures from the internet. JPG, PNG, WebP and HEIC all work, in upper or lower case.</p>
+<table><thead><tr><th scope="col">Picture</th><th scope="col">File names (first match wins)</th></tr></thead><tbody>
+<tr><td>Poster (2:3)</td><td><code>&lt;file&gt;-poster</code>, <code>poster</code>, <code>movie</code>, <code>folder</code>, <code>cover</code></td></tr>
+<tr><td>Backdrop (16:9)</td><td><code>&lt;file&gt;-fanart</code>, <code>&lt;file&gt;-backdrop</code>, <code>fanart</code>, <code>backdrop</code>, <code>background</code>, <code>art</code>, <code>landscape</code></td></tr>
+<tr><td>Title logo (transparent PNG)</td><td><code>&lt;file&gt;-logo</code>, <code>logo</code>, <code>clearlogo</code></td></tr>
+</tbody></table>
+<p><code>&lt;file&gt;</code> is the video's name without the extension, for example <code>Ember Coast (2019)-poster.jpg</code>. Without local art, Velora uses a cover inside the MKV, then TMDB (with a free key under Integrations).</p>
+<h2 id="nfo">Details from .nfo files</h2>
+<p>A Kodi or Jellyfin <code>.nfo</code> file next to the film sets its title, plot and IDs: <code>&lt;file&gt;.nfo</code>, or <code>movie.nfo</code> in the movie's folder. With a TMDB or IMDb ID inside, the match is exact.</p>
+<h2 id="subtitles">Subtitles</h2>
+<p>See <a href="extra-files.html#subtitles">Artwork and subtitles</a> for how to name subtitle files.</p>
+<div class="nextpages"><a href="movies.html"><strong>Movies</strong><span>Versions, extras, moving backdrops and disc rips</span></a><a href="shows.html"><strong>Shows</strong><span>Seasons, specials, episode numbers and intros</span></a><a href="music.html"><strong>Music and audiobooks</strong><span>Albums, discs, covers, lyrics and chapters</span></a><a href="reading.html"><strong>Books, manga and scores</strong><span>Books, papers, manga and sheet music</span></a><a href="extra-files.html"><strong>Artwork and subtitles</strong><span>Every file Velora reads next to your media</span></a></div></article></div>
+</main>
+<footer><div class="wrap foot">
+<div class="cols">
+<div><strong>Product</strong><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">Create with AI</a><a href="../server.html">Server</a></div>
+<div><strong>Compare</strong><a href="../compare.html">Velora, Plex, Jellyfin</a><a href="../requirements.html">System requirements</a><a href="../changelog.html">Changelog</a><a href="../faq.html">FAQ</a></div>
+<div><strong>Docs</strong><a href="../docs/index.html">Setup</a><a href="../docs/media-folders.html">Organizing your media</a><a href="../docs/movies.html">Naming movies</a><a href="../docs/shows.html">Naming shows</a><a href="../docs/ai-models.html">AI models</a><a href="../docs/troubleshooting.html">Troubleshooting</a></div>
+<div><strong>Language</strong><a href="../index.html" hreflang="en">English</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a></div>
+</div>
+<div class="fine"><div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="../docs/privacy.html">Privacy</a> · <a href="../investors.html">Investors</a> · © 2026 Gökdeniz Gülmez</div>
+<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a></div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

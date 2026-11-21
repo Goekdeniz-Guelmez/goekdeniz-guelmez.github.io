@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Adding media folders: Velora docs</title>
-<meta name="description" content="Velora documentation: Adding media folders.">
+<title>Organizing your media: Velora docs</title>
+<meta name="description" content="Velora documentation: Organizing your media.">
 <meta name="theme-color" content="#0E0E10">
-<meta property="og:title" content="Adding media folders: Velora docs">
-<meta property="og:description" content="Velora documentation: Adding media folders.">
+<meta property="og:title" content="Organizing your media: Velora docs">
+<meta property="og:description" content="Velora documentation: Organizing your media.">
 <meta property="og:image" content="../assets/screens/web-home.webp">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/site.css">
@@ -21,37 +21,109 @@
 <nav id="nav" class="nav" aria-label="Main"><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">AI</a><a href="../server.html">Server</a><a href="../compare.html">Compare</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../download.html">Download</a></nav>
 </div></header>
 <main id="main">
-<div class="wrap docs"><nav class="side" aria-label="Documentation"><a href="index.html">Setup</a><a href="media-folders.html" aria-current="page">Adding media folders</a><a href="users.html">Users and devices</a><a href="ai-models.html">AI models</a><a href="music-generation.html">Music generation</a><a href="create-audio.html">Create Audio</a><a href="jellyfin.html">Jellyfin</a><a href="plex.html">Plex</a><a href="navidrome.html">Navidrome</a><a href="platforms.html">Features by platform</a><a href="mcp.html">MCP setup</a><a href="multi-server.html">Multi-server</a><a href="privacy.html">Privacy</a><a href="troubleshooting.html">Troubleshooting</a></nav><article class="prose">
-<h1>Adding media folders</h1>
-<p>Velora reads media from folders you link in <strong>Media Folders</strong> or <strong>Libraries</strong> in Velora Server. A library has a type and one or more folders, which can be on different drives.</p>
-<div class="callout"><p><strong>Velora never writes to your media folders.</strong> Artwork, previews, conversions and generated audio go into Velora's own data folder.</p></div>
-<h2>Library types</h2>
-<table><thead><tr><th scope="col">Type</th><th scope="col">Files</th><th scope="col">Recommended layout</th></tr></thead><tbody>
-<tr><td>Movies</td><td>MKV, MP4, MOV and more</td><td><code>Movies/Title (Year)/Title (Year).mkv</code></td></tr>
-<tr><td>Series</td><td>As movies</td><td><code>Shows/Show (Year)/Season 01/Show - S01E01 - Title.mkv</code></td></tr>
-<tr><td>Music</td><td>M4A, MP3, FLAC, ALAC, WAV</td><td><code>Music/Artist/Album/01 Song.m4a</code>, with <code>cover.jpg</code> and optional <code>.lrc</code> lyrics</td></tr>
-<tr><td>Audiobooks</td><td>M4B, M4A, MP3</td><td><code>Audiobooks/Author/Title/</code>, one M4B with chapters or one file per chapter</td></tr>
-<tr><td>Books</td><td>EPUB, PDF</td><td><code>Books/Author - Title.epub</code></td></tr>
-<tr><td>Papers</td><td>PDF</td><td><code>Papers/</code>, grouped by subject automatically</td></tr>
-<tr><td>Manga</td><td>Image folders, CBZ</td><td><code>Manga/Series/Volume 01/</code></td></tr>
-<tr><td>Sheet Music</td><td>PDF, MusicXML (.musicxml, .mxl), MIDI</td><td><code>Sheet Music/Composer/Title.mxl</code> or <code>Sheet Music/Composer - Title.pdf</code></td></tr>
+<div class="wrap docs"><nav class="side" aria-label="Documentation"><span class="side-h">Get started</span><a href="index.html">Setup</a><a href="users.html">Users and devices</a><span class="side-h">Organize your media</span><a href="media-folders.html" aria-current="page">Overview and rules</a><a href="movies.html">Movies</a><a href="shows.html">Shows</a><a href="music.html">Music and audiobooks</a><a href="reading.html">Books, manga and scores</a><a href="extra-files.html">Artwork and subtitles</a><span class="side-h">AI</span><a href="ai-models.html">AI models</a><a href="music-generation.html">Music generation</a><a href="create-audio.html">Create Audio</a><span class="side-h">Other servers</span><a href="jellyfin.html">Jellyfin</a><a href="plex.html">Plex</a><a href="navidrome.html">Navidrome</a><a href="multi-server.html">Multi-server</a><span class="side-h">Reference</span><a href="platforms.html">Features by platform</a><a href="mcp.html">MCP setup</a><a href="privacy.html">Privacy</a><a href="troubleshooting.html">Troubleshooting</a></nav><article class="prose">
+<h1>Organizing your media</h1>
+<p class="lede-s">Velora reads your files where they are. It never renames, moves or writes into your media folders, so the way you name and arrange them is what Velora goes by. A few simple habits give you the right titles, posters, episode order and extras on the first scan, with nothing to fix afterwards.</p>
+<div class="callout"><p><strong>Already using Jellyfin, Plex or Kodi?</strong> Keep your folders as they are. Velora reads the same layout: season folders, <code>.nfo</code> files, <code>poster.jpg</code>, <code>Extras</code> folders and the rest.</p></div>
+<h2 id="rules">The six rules</h2>
+<ol class="rules">
+<li><strong>One folder per kind of media.</strong> Movies, shows, music, audiobooks, books, papers, manga and sheet music each get their own top folder, and each becomes its own library.</li>
+<li><strong>One folder per title.</strong> A folder for each movie, each show, each album and each audiobook. Extras, artwork and subtitles then belong to the right title.</li>
+<li><strong>Put the year in the name.</strong> <code>Ember Coast (2019)</code> finds the right film among remakes and films of the same name.</li>
+<li><strong>Number your episodes.</strong> <code>S01E01</code> in the file name, inside a <code>Season 01</code> folder.</li>
+<li><strong>Give bonus material its own folder.</strong> <code>Extras/</code> for making-ofs and trailers, <code>backdrops/</code> for a moving background.</li>
+<li><strong>Name extra files like the file they belong to.</strong> <code>Ember Coast (2019).en.srt</code> next to <code>Ember Coast (2019).mkv</code>.</li>
+</ol>
+<h2 id="layout">A drive, laid out</h2>
+<p>This is the layout that works best. Every example in these docs uses it.</p>
+<pre class="tree"><code>Velora-Media/                              <span class="n">← link this folder</span>
+├── Movies/
+│   └── Ember Coast (2019)/
+│       └── Ember Coast (2019).mkv
+├── Shows/
+│   └── Harbor Lights (2021)/
+│       └── Season 01/
+│           └── Harbor Lights - S01E01 - Pilot.mkv
+├── Music/
+│   └── Mira Vale/
+│       └── Lowlight (2024)/
+│           └── 01 Lowlight.flac
+├── Audiobooks/
+│   └── Lena Hart/
+│       └── Ember Coast Stories/
+│           └── Ember Coast Stories.m4b
+├── Books/
+│   └── Lena Hart/
+│       └── The Harbour Letters.epub
+├── Papers/
+│   └── Machine Learning/
+│       └── Attention Over Tides (2023).pdf
+├── Manga/
+│   └── Moonlit Courier/
+│       └── Moonlit Courier v01.cbz
+└── Sheet Music/
+    └── Erik Satie/
+        └── Gymnopédie No. 1.mxl</code></pre>
+<p>When you link <code>Velora-Media</code> in Velora Server, it suggests one library per subfolder and takes each library's type from the folder's name. You confirm or change the type before anything is scanned.</p>
+<h2 id="folder-names">Folder names Velora recognises</h2>
+<p>Upper or lower case doesn't matter, and <code>-</code> or <code>_</code> count as spaces.</p>
+<table><thead><tr><th scope="col">Library</th><th scope="col">Folder names</th></tr></thead><tbody>
+<tr><td>Movies</td><td>Movies, Movie, Films, Film, Filme, Cinema</td></tr>
+<tr><td>Shows</td><td>Shows, TV Shows, TV, Series, Serien, Episodes, Anime</td></tr>
+<tr><td>Music</td><td>Music, Musik, Audio, Albums</td></tr>
+<tr><td>Audiobooks</td><td>Audiobooks, Audiobook, Hörbücher</td></tr>
+<tr><td>Books</td><td>Books, eBooks, Bücher</td></tr>
+<tr><td>Papers</td><td>Papers, Academic Papers, Academic, Research, Publications</td></tr>
+<tr><td>Manga</td><td>Manga, Comics, Manhwa, Manhua, Webtoons, 漫画, マンガ</td></tr>
+<tr><td>Sheet Music</td><td>Sheet Music, Scores, Music Scores, Noten, Partituren</td></tr>
 </tbody></table>
-<h2>What Velora reads next to your files</h2>
-<ul><li><code>.nfo</code> files (Jellyfin and Kodi style) for titles, plots and episode names.</li><li><code>poster.jpg</code>, <code>fanart.jpg</code>, <code>cover.jpg</code> and other local art.</li><li>Chapters, audio and subtitle tracks inside the file, plus external <code>.srt</code> subtitles.</li><li><code>.lrc</code> files for synced lyrics.</li></ul>
-<h2>Online metadata</h2>
-<p>Velora can fill in posters, cast, album art and book covers from TMDB, TVmaze, Kitsu, AniList, MusicBrainz, Cover Art Archive, TheAudioDB, Open Library, Google Books, arXiv, Crossref and MangaDex. Each provider can be switched off under <strong>Integrations</strong>. Lookups send titles and IDs, never file paths, names, sizes or hashes.</p>
-<h2>Episode order</h2>
-<p>TMDB numbers some shows by their original broadcast, while the discs follow another order (Cowboy Bebop, Firefly, Futurama). If a show's episodes get the names of other episodes, open <strong>Metadata &amp; Artwork</strong> in Velora Server, choose the show under <strong>Episode order</strong> and pick the order your files use, for example <em>Blu-ray Order</em>. Velora looks the show up again. Your files and their numbering stay as they are.</p>
-<h2>Rescanning</h2>
-<p>New files are picked up by a scan. Use <strong>Rescan</strong> on a library, or <strong>Rescan All</strong>. Previews, metadata and recommendations then update in the background; follow them on the <strong>Activity</strong> page.</p>
-<figure class="shot wide"><img src="../assets/screens/server-libraries.webp" width="1100" height="687" alt="Velora Server for Mac: the Libraries page" loading="lazy" decoding="async"><figcaption>Velora Server for Mac: the Libraries page</figcaption></figure>
-</article></div>
+<p>For any other name, Velora looks at what's inside: videos with episode numbers suggest Shows, other videos Movies, M4B files Audiobooks, CBZ files Manga, EPUB files Books, PDFs Papers, MusicXML and MIDI files Sheet Music, and audio files Music. You can always pick the type yourself.</p>
+<div class="callout"><p><strong>Film and game soundtracks</strong> belong in Music. A folder called “Film Scores” or “Game Scores” stays a Music library; only the names above make a Sheet Music library.</p></div>
+<h2 id="file-types">File types</h2>
+<table><thead><tr><th scope="col">Library</th><th scope="col">Files</th></tr></thead><tbody>
+<tr><td>Movies and Shows</td><td>MKV, MP4, M4V, MOV, AVI, WebM, TS, M2TS, MTS, WMV, MPG</td></tr>
+<tr><td>Music</td><td>FLAC, ALAC, M4A, AAC, MP3, WAV, AIFF, Ogg, Opus, WMA</td></tr>
+<tr><td>Audiobooks</td><td>M4B, plus M4A, MP3 and other audio files inside an Audiobooks library</td></tr>
+<tr><td>Books</td><td>EPUB (best, opens in the paged reader) and PDF</td></tr>
+<tr><td>Papers</td><td>PDF</td></tr>
+<tr><td>Manga</td><td>CBZ, CBR, CB7, ZIP, PDF, or a folder of images (JPG, PNG, WebP, HEIC, AVIF, GIF)</td></tr>
+<tr><td>Sheet Music</td><td>MusicXML (<code>.musicxml</code>, <code>.mxl</code>, <code>.xml</code>), MIDI (<code>.mid</code>, <code>.midi</code>) and PDF</td></tr>
+<tr><td>Private Photos</td><td>Photos and videos in any layout. A photo folder you link becomes a Private Photos library that only the people you choose can see.</td></tr>
+</tbody></table>
+<h2 id="performance">For the best performance</h2>
+<ul>
+<li><strong>Video:</strong> H.264 or HEVC in MKV or MP4 is never re-encoded; Velora only repackages it for the device, so it starts in well under a second.</li>
+<li><strong>Audio:</strong> AAC, AC-3 (Dolby Digital), E-AC-3, ALAC, FLAC, MP3 and PCM play as they are. DTS and TrueHD are converted while you watch, on the Mac's hardware media engine. That's quick, but files whose audio needs no conversion start fastest and use the least power.</li>
+<li><strong>Subtitles:</strong> text subtitles (SRT, ASS, WebVTT, or text tracks inside the file) switch on instantly. Image subtitles from discs (PGS, VobSub) have to be burned into the picture, which starts more slowly.</li>
+<li><strong>Chapters:</strong> MKV chapters named <em>Opening</em> or <em>Intro</em> and <em>Ending</em> or <em>Credits</em> give Skip Intro and Skip Credits straight away. See <a href="shows.html#intros">Shows</a>.</li>
+<li><strong>Drives:</strong> an SSD, or a drive that doesn't spin down, starts videos and finishes scans fastest. If a drive is unplugged, its titles are hidden and come back with their progress when it's connected again.</li>
+<li><strong>The first scan:</strong> titles appear within minutes; details, artwork, scrubbing thumbnails and recommendations follow in the background. Follow them on the <strong>Activity</strong> page. You can watch while it works.</li>
+</ul>
+<h2 id="several-drives">One library, several drives</h2>
+<p>A library can hold folders on several drives, for example <code>Movies</code> on an external SSD and on the Mac's own disk. Use the same layout in each and add both to the same library; Velora shows them as one. Don't link a folder that sits inside another linked folder.</p>
+<h2 id="skipped">What Velora skips</h2>
+<p>Hidden files and folders (names starting with a dot), and the working folders other apps leave on a drive: <code>metadata</code>, <code>config</code>, <code>cache</code>, <code>transcodes</code>, <code>backups</code>, <code>navidrome-data</code>, <code>extrafanart</code>, <code>.actors</code>, <code>*.trickplay</code>, <code>@eaDir</code>, <code>#recycle</code>, <code>lost+found</code> and photo caches. A Jellyfin, Kodi, Navidrome or Synology folder on the same drive does no harm.</p>
+<h2 id="renaming">Renaming and reorganizing later</h2>
+<p>You can rename and move files at any time. A file renamed or moved on the same drive keeps its progress, watched state, highlights and details. Click <strong>Rescan</strong> on the library so Velora reads the new name. A file copied to another drive counts as a new file.</p>
+<h2 id="mistakes">Common mistakes</h2>
+<table><thead><tr><th scope="col">What you see</th><th scope="col">Why</th><th scope="col">Fix</th></tr></thead><tbody>
+<tr><td>A show's episodes appear as separate videos</td><td>No season or episode numbers</td><td>Name them <code>S01E01</code>, or put <code>E01</code> in names inside a <code>Season 01</code> folder</td></tr>
+<tr><td>A movie gets another film's poster and details</td><td>No year, or a name full of release tags</td><td>Folder and file named <code>Title (Year)</code></td></tr>
+<tr><td>Several movies share one poster</td><td>Several films in one folder with one <code>poster.jpg</code></td><td>One folder per movie, or <code>&lt;file name&gt;-poster.jpg</code></td></tr>
+<tr><td>Making-ofs and trailers show up as movies</td><td>They sit loose beside the film</td><td>Move them into <code>Extras/</code>, or end their names with <code>-trailer</code> or <code>-featurette</code></td></tr>
+<tr><td>Movies appear among shows, or the other way round</td><td>Both in one folder</td><td>Separate folders, separate libraries</td></tr>
+<tr><td>A subtitle file doesn't show</td><td>Its name differs from the video's</td><td>Name it like the video: <code>Title (Year).en.srt</code></td></tr>
+<tr><td>Every book in a folder has the same cover</td><td>One <code>cover.jpg</code> shared by many books</td><td>Remove it (EPUBs carry their own cover), or give each book its own folder</td></tr>
+<tr><td>Episodes have the names of other episodes</td><td>The discs follow another order than TMDB</td><td>Set the show's <a href="shows.html#episode-order">episode order</a></td></tr>
+</tbody></table>
+<h2>Guides for each library</h2>
+<div class="nextpages"><a href="movies.html"><strong>Movies</strong><span>Versions, extras, moving backdrops and disc rips</span></a><a href="shows.html"><strong>Shows</strong><span>Seasons, specials, episode numbers and intros</span></a><a href="music.html"><strong>Music and audiobooks</strong><span>Albums, discs, covers, lyrics and chapters</span></a><a href="reading.html"><strong>Books, manga and scores</strong><span>Books, papers, manga and sheet music</span></a><a href="extra-files.html"><strong>Artwork and subtitles</strong><span>Every file Velora reads next to your media</span></a></div></article></div>
 </main>
 <footer><div class="wrap foot">
 <div class="cols">
 <div><strong>Product</strong><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">Create with AI</a><a href="../server.html">Server</a></div>
 <div><strong>Compare</strong><a href="../compare.html">Velora, Plex, Jellyfin</a><a href="../requirements.html">System requirements</a><a href="../changelog.html">Changelog</a><a href="../faq.html">FAQ</a></div>
-<div><strong>Docs</strong><a href="../docs/index.html">Setup</a><a href="../docs/media-folders.html">Media folders</a><a href="../docs/ai-models.html">AI models</a><a href="../docs/troubleshooting.html">Troubleshooting</a></div>
+<div><strong>Docs</strong><a href="../docs/index.html">Setup</a><a href="../docs/media-folders.html">Organizing your media</a><a href="../docs/movies.html">Naming movies</a><a href="../docs/shows.html">Naming shows</a><a href="../docs/ai-models.html">AI models</a><a href="../docs/troubleshooting.html">Troubleshooting</a></div>
 <div><strong>Language</strong><a href="../index.html" hreflang="en">English</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a></div>
 </div>
 <div class="fine"><div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="../docs/privacy.html">Privacy</a> · <a href="../investors.html">Investors</a> · © 2026 Gökdeniz Gülmez</div>

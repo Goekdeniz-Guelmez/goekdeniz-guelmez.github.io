@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shows: Velora docs</title>
+<meta name="description" content="Velora documentation: Shows.">
+<meta name="theme-color" content="#0E0E10">
+<meta property="og:title" content="Shows: Velora docs">
+<meta property="og:description" content="Velora documentation: Shows.">
+<meta property="og:image" content="../assets/screens/web-home.webp">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true"></div><div class="mist" aria-hidden="true"></div>
+<header class="top"><div class="wrap">
+<a class="brand" href="../index.html" aria-label="Velora home"><span class="tile" data-mark data-small></span>Velora</a>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" class="nav" aria-label="Main"><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">AI</a><a href="../server.html">Server</a><a href="../compare.html">Compare</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../download.html">Download</a></nav>
+</div></header>
+<main id="main">
+<div class="wrap docs"><nav class="side" aria-label="Documentation"><span class="side-h">Get started</span><a href="index.html">Setup</a><a href="users.html">Users and devices</a><span class="side-h">Organize your media</span><a href="media-folders.html">Overview and rules</a><a href="movies.html">Movies</a><a href="shows.html" aria-current="page">Shows</a><a href="music.html">Music and audiobooks</a><a href="reading.html">Books, manga and scores</a><a href="extra-files.html">Artwork and subtitles</a><span class="side-h">AI</span><a href="ai-models.html">AI models</a><a href="music-generation.html">Music generation</a><a href="create-audio.html">Create Audio</a><span class="side-h">Other servers</span><a href="jellyfin.html">Jellyfin</a><a href="plex.html">Plex</a><a href="navidrome.html">Navidrome</a><a href="multi-server.html">Multi-server</a><span class="side-h">Reference</span><a href="platforms.html">Features by platform</a><a href="mcp.html">MCP setup</a><a href="privacy.html">Privacy</a><a href="troubleshooting.html">Troubleshooting</a></nav><article class="prose">
+<h1>Shows</h1>
+<p class="lede-s">A folder for the show, a folder for each season, and <code>S01E01</code> in every episode's name. That's all Velora needs to list every episode in order with its real title.</p>
+<h2 id="basic">The basic layout</h2>
+<pre class="tree"><code>Shows/
+└── Harbor Lights (2021)/
+    ├── Season 01/
+    │   ├── Harbor Lights - S01E01 - Pilot.mkv
+    │   └── Harbor Lights - S01E02 - The Keeper.mkv
+    └── Season 02/
+        └── Harbor Lights - S02E01.mkv</code></pre>
+<ul>
+<li>The <strong>show folder names the show</strong>, whatever the episode files say. Add the year when a show has a remake or a namesake.</li>
+<li>The episode title after the number is optional: Velora takes real titles from TMDB or TVmaze.</li>
+<li>Episodes may also sit directly in the show folder, as long as their names carry <code>S01E01</code>.</li>
+</ul>
+<h2 id="numbers">Episode numbers</h2>
+<table><thead><tr><th scope="col">Pattern</th><th scope="col">Example</th></tr></thead><tbody>
+<tr><td><code>S01E01</code> (recommended)</td><td><code>Harbor Lights - S01E01 - Pilot.mkv</code></td></tr>
+<tr><td>Lower case, dots or spaces</td><td><code>harbor.lights.s01e01.mkv</code>, <code>S01 E01</code></td></tr>
+<tr><td><code>1x01</code></td><td><code>Harbor Lights 1x01.mkv</code></td></tr>
+<tr><td>Episode only, inside a season folder</td><td><code>Season 01/E01.mkv</code>, <code>Ep 1</code>, <code>Episode 1</code>, <code>Folge 1</code></td></tr>
+<tr><td>Double episodes</td><td><code>S01E01-E02</code>, <code>S01E01E02</code>, <code>S01E01-02</code></td></tr>
+</tbody></table>
+<h2 id="seasons">Season folders and specials</h2>
+<p>Season folders can be called <code>Season 01</code>, <code>Season 1</code>, <code>S01</code>, <code>Staffel 1</code>, <code>Saison 1</code> or <code>Temporada 1</code>. Specials go in <code>Specials</code> or <code>Season 00</code>, numbered <code>S00E01</code>, <code>S00E02</code>, in the order TMDB lists them.</p>
+<h2 id="complete">A complete show folder</h2>
+<pre class="tree"><code>Harbor Lights (2021)/
+├── tvshow.nfo                                  <span class="n">← optional details</span>
+├── poster.jpg                                  <span class="n">← show artwork</span>
+├── fanart.jpg
+├── logo.png
+├── season01-poster.jpg                         <span class="n">← season poster</span>
+├── season-specials-poster.jpg
+├── backdrops/
+│   └── Backdrop.mkv                            <span class="n">← moving backdrop</span>
+├── Extras/
+│   └── Behind the Lighthouse.mkv               <span class="n">← show extra</span>
+├── Specials/
+│   └── Harbor Lights - S00E01 - Winter Special.mkv
+└── Season 01/
+    ├── Harbor Lights - S01E01 - Pilot.mkv
+    ├── Harbor Lights - S01E01 - Pilot.en.srt   <span class="n">← subtitles</span>
+    ├── Harbor Lights - S01E01 - Pilot-thumb.jpg <span class="n">← episode still</span>
+    └── Harbor Lights - S01E01 - Pilot.nfo</code></pre>
+<h2 id="extras">Extras and moving backdrops</h2>
+<ul>
+<li><strong>Extras</strong> go in an <code>Extras</code> folder (or <code>Featurettes</code>, <code>Trailers</code>, <code>Interviews</code>, the same names as for movies) in the show folder. They show on the show's page, not as episodes.</li>
+<li>A <strong>moving backdrop</strong> goes in <code>backdrops/Backdrop.mkv</code>, or as <code>Backdrop.mkv</code> directly in the show folder. Box sets often have one menu loop per disc: put them all in the <code>backdrops</code> folder as <code>Backdrop.mkv</code>, <code>Backdrop 2.mkv</code>, <code>Backdrop 3.mkv</code>.</li>
+</ul>
+<h2 id="intros">Skip Intro and Skip Credits</h2>
+<p>Velora finds intros, recaps, credits and previews in four ways:</p>
+<ol>
+<li><strong>Chapters in the file.</strong> Chapters named <em>Opening</em>, <em>OP</em>, <em>Intro</em> or <em>Vorspann</em>, and <em>Ending</em>, <em>ED</em>, <em>Credits</em> or <em>Abspann</em>, work at once.</li>
+<li><strong>Jellyfin's segment data</strong>, if Jellyfin's Intro Skipper already found them.</li>
+<li><strong>An <code>.edl</code> file</strong> next to the episode (<code>&lt;file&gt;.edl</code>, as Intro Skipper writes it).</li>
+<li><strong>Audio matching across the season.</strong> Velora compares the episodes' sound and finds the part they share. It works best with the whole season in one folder.</li>
+</ol>
+<p>Whether the intro and credits are skipped automatically is each person's choice under <strong>Settings › Playback</strong>.</p>
+<h2 id="episode-order">Episode order</h2>
+<p>TMDB numbers some shows by their original broadcast, while the discs follow another order (Cowboy Bebop, Firefly, Futurama). If episodes get the names of other episodes, keep your files as they are: open <strong>Metadata &amp; Artwork</strong> in Velora Server, choose the show under <strong>Episode order</strong> and pick the order your files use, for example <em>Blu-ray Order</em>. Names, descriptions and episode pictures then match your files.</p>
+<h2 id="artwork">Artwork</h2>
+<table><thead><tr><th scope="col">Picture</th><th scope="col">Where and how</th></tr></thead><tbody>
+<tr><td>Show poster, backdrop, logo</td><td>In the show folder: <code>poster</code>, <code>folder</code> or <code>show</code>; <code>fanart</code> or <code>backdrop</code>; <code>logo</code> or <code>clearlogo</code></td></tr>
+<tr><td>Season poster</td><td>In the show folder: <code>season01-poster.jpg</code>, <code>season-specials-poster.jpg</code>; or <code>poster.jpg</code> inside the season folder</td></tr>
+<tr><td>Episode still</td><td>Next to the episode: <code>&lt;file&gt;-thumb.jpg</code> or <code>&lt;file&gt;.jpg</code>. Without one, Velora uses TMDB's still or a frame from the video.</td></tr>
+</tbody></table>
+<h2 id="nfo">Details from .nfo files</h2>
+<p><code>tvshow.nfo</code> in the show folder describes the show; <code>&lt;file&gt;.nfo</code> next to an episode describes that episode. Velora reads both, and they win over online details.</p>
+<div class="nextpages"><a href="movies.html"><strong>Movies</strong><span>Versions, extras, moving backdrops and disc rips</span></a><a href="shows.html"><strong>Shows</strong><span>Seasons, specials, episode numbers and intros</span></a><a href="music.html"><strong>Music and audiobooks</strong><span>Albums, discs, covers, lyrics and chapters</span></a><a href="reading.html"><strong>Books, manga and scores</strong><span>Books, papers, manga and sheet music</span></a><a href="extra-files.html"><strong>Artwork and subtitles</strong><span>Every file Velora reads next to your media</span></a></div></article></div>
+</main>
+<footer><div class="wrap foot">
+<div class="cols">
+<div><strong>Product</strong><a href="../watch.html">Watch</a><a href="../listen.html">Listen</a><a href="../read.html">Read</a><a href="../create.html">Create with AI</a><a href="../server.html">Server</a></div>
+<div><strong>Compare</strong><a href="../compare.html">Velora, Plex, Jellyfin</a><a href="../requirements.html">System requirements</a><a href="../changelog.html">Changelog</a><a href="../faq.html">FAQ</a></div>
+<div><strong>Docs</strong><a href="../docs/index.html">Setup</a><a href="../docs/media-folders.html">Organizing your media</a><a href="../docs/movies.html">Naming movies</a><a href="../docs/shows.html">Naming shows</a><a href="../docs/ai-models.html">AI models</a><a href="../docs/troubleshooting.html">Troubleshooting</a></div>
+<div><strong>Language</strong><a href="../index.html" hreflang="en">English</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a></div>
+</div>
+<div class="fine"><div><strong>Created by Gökdeniz Gülmez</strong> · <a href="https://github.com/Goekdeniz-Guelmez">@Goekdeniz-Guelmez on GitHub</a><br>Velora is self-hosted: your media stays on your Mac. · <a href="../docs/privacy.html">Privacy</a> · <a href="../investors.html">Investors</a> · © 2026 Gökdeniz Gülmez</div>
+<a class="btn btn-sponsor" href="https://github.com/sponsors/Goekdeniz-Guelmez"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.3 1.8 8.4A3.7 3.7 0 0 1 8 3.3a3.7 3.7 0 0 1 6.2 5.1z"/></svg> Sponsor on GitHub</a></div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

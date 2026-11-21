@@ -181,3 +181,16 @@ footer .fine{display:flex;gap:20px;align-items:center;justify-content:space-betw
 @media (max-width:860px){.surface:nth-child(even) .pics{order:0}.herodevices{grid-template-columns:1fr 150px}.stats{grid-template-columns:repeat(2,1fr)}footer .cols{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:760px){.langs{margin-left:auto}.top .menu-btn{margin-left:8px}}
 @media (max-width:560px){.plats{grid-template-columns:1fr}.pics{flex-wrap:wrap}.pics .shot.wide{flex-basis:100%}.herodevices{grid-template-columns:1fr}.herodevices .shot.phone{display:none}.hero{padding-top:44px}}
+/* Docs: sidebar groups, folder trees, lead paragraph, next pages */
+.side .side-h{display:block;color:var(--cream);opacity:.55;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:18px 10px 4px}
+.side .side-h:first-child{padding-top:0}
+.prose .lede-s{font-size:19px;line-height:1.55;color:rgba(245,245,247,.92)}
+pre.tree{font-size:14px;line-height:1.55;white-space:pre}
+pre.tree .n{color:var(--orange);opacity:.85;font-family:var(--sans,inherit);font-size:13px}
+.prose ol.rules li{margin:6px 0}
+.nextpages{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin:20px 0 8px}
+.nextpages a{display:block;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--surface-2);text-decoration:none;color:var(--text)}
+.nextpages a:hover{border-color:var(--orange)}
+.nextpages strong{display:block;color:var(--cream)}
+.nextpages span{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+@media (max-width:860px){.side .side-h{width:100%;padding:10px 4px 0}}
